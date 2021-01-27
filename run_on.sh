@@ -9,3 +9,4 @@ var="IP${NODE_ID}"
 NODE_IP=${!var}
 
 ssh ubuntu@"${NODE_IP}" ${CMD}
+

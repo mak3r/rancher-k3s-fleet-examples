@@ -3,3 +3,5 @@
 *.tfstate.*
 .terraform
 kubeconfig*
+.terraform.lock.hcl
+/local

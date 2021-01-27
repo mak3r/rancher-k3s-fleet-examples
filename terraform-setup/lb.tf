@@ -40,7 +40,7 @@ resource "aws_elb" "rancher-server-lb" {
 }
 
 data "digitalocean_domain" "rancher" {
-  name = "plgrnd.be"
+  name = "mak3r.design"
 }
 
 resource "digitalocean_record" "rancher" {

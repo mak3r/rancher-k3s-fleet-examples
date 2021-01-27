@@ -9,7 +9,7 @@ variable "aws_secret_key" {
 variable "aws_region" {
   type        = string
   description = "AWS region used for all resources"
-  default     = "eu-central-1"
+  default     = "us-east-1"
 }
 variable "digitalocean_token" {
   type = string
@@ -23,5 +23,5 @@ variable "ssh_key_file_name" {
 variable "prefix" {
   type        = string
   description = "Prefix added to names of all resources"
-  default     = "bhofmann"
+  default     = "mak3r"
 }
