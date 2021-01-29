@@ -1,4 +1,4 @@
-namespace: mak3r-demo
+namespace: default
 targetCustomizations:
   - name: drivethru-no
     yaml:
