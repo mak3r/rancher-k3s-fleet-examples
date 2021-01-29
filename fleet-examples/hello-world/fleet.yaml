@@ -7,7 +7,6 @@ targetCustomizations:
     yaml:
       overlays:
         - drivethru-no
-    clusterGroup: ny-region
   - name: drivethru-yes
     clusterSelector:
       matchLabels:
@@ -15,4 +14,3 @@ targetCustomizations:
     yaml:
       overlays:
         - drivethru-yes
-    clusterGroup: ny-region
