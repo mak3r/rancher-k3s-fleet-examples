@@ -1,0 +1,12 @@
+namespace: default
+targetCustomizations:
+  - name: drivethru-no
+    yaml:
+      overlays:
+        - drivethru-no
+    clusterGroup: drivethru-no
+  - name: drivethru-yes
+    yaml:
+      overlays:
+        - drivethru-yes
+    clusterGroup: drivethru-yes
