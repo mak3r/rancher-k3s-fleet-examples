@@ -4,9 +4,9 @@ targetCustomizations:
     yaml:
       overlays:
         - drivethru-no
-    clusterGroup: drivethru-no
+    clusterGroup: ny-region
   - name: drivethru-yes
     yaml:
       overlays:
         - drivethru-yes
-    clusterGroup: drivethru-yes
+    clusterGroup: ny-region
