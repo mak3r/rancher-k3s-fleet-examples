@@ -1,16 +1,18 @@
 namespace: default
 targetCustomizations:
-  - name: drivethru-no
-    clusterSelector:
-      matchLabels:
-        drivethru: no
-    yaml:
-      overlays:
-        - drivethru-no
-  - name: drivethru-yes
-    clusterSelector:
-      matchLabels:
-        drivethru: yes
-    yaml:
-      overlays:
-        - drivethru-yes
+- name: drivethru-no
+  clusterSelector:
+    matchLabels:
+      drivethru: no
+  yaml:
+    overlays:
+      - drivethru-no
+  clusterGroup: ny-region
+- name: drivethru-yes
+  clusterSelector:
+    matchLabels:
+      drivethru: yes
+  yaml:
+    overlays:
+      - drivethru-yes
+  clusterGroup: ny-region
