@@ -1,6 +1,15 @@
 targetCustomizations:
-  - name: arm
+  - name: green
     yaml:
       overlays:
         - green-color
-    clusterGroup: two
+    clusterSelector:
+      matchLabels:
+        color: green
+  - name: red
+    yaml:
+      overlays:
+        - red-color
+    clusterSelector:
+      matchLabels:
+        color: red
