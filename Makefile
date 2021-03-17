@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 .PHONY: sleep destroy all step_01 step_02 step_03 step_04
 K3S_TOKEN="mak3rVA87qPxet2SB8BDuLPWfU2xnPUSoETYF"
-
+SERVER_NUM=-1
 export KUBECONFIG=kubeconfig
 
 destroy:
@@ -62,3 +62,8 @@ step_04:
 	source get_env.sh && ssh -o StrictHostKeyChecking=no ubuntu@$${IP5} "curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC='--tls-san $${IP5}' INSTALL_K3S_CHANNEL=v1.18 K3S_KUBECONFIG_MODE=644 sh -"
 	source get_env.sh && scp -o StrictHostKeyChecking=no ubuntu@$${IP5}:/etc/rancher/k3s/k3s.yaml kubeconfig_cluster_three
 	source get_env.sh && sed -i '' "s/127.0.0.1/$${IP5}/g" kubeconfig_cluster_three
+
+add_node:
+	source get_env.sh && ssh -o StrictHostKeyChecking=no ubuntu@$${IP${SERVER_NUM}} "curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC='--tls-san $${IP${SERVER_NUM}}' INSTALL_K3S_CHANNEL=v1.18 K3S_KUBECONFIG_MODE=644 sh -"
+	source get_env.sh && scp -o StrictHostKeyChecking=no ubuntu@$${IP${SERVER_NUM}}:/etc/rancher/k3s/k3s.yaml kubeconfig_cluster_three
+	source get_env.sh && sed -i '' "s/127.0.0.1/$${IP${SERVER_NUM}}/g" kubeconfig_cluster_three

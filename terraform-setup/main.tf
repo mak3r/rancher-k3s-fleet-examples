@@ -23,7 +23,7 @@ resource "aws_security_group" "sg_allowall" {
 }
 
 resource "aws_instance" "ubuntu_vms" {
-  count         = 5
+  count         = var.amd_count
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t3a.xlarge"
 
@@ -40,7 +40,7 @@ resource "aws_instance" "ubuntu_vms" {
 }
 
 resource "aws_instance" "arm_vms" {
-  count         = 1
+  count         = var.arm_count
   ami           = data.aws_ami.arm.id
   instance_type = "a1.medium"
 

@@ -49,6 +49,7 @@ To register every cluster run
 
 Wait until all clusters are read.
 
+
 ### Configure Fleet
 
 Go to "Cluster Explorer" of local cluster -> "Continuous Delivery"
@@ -75,6 +76,30 @@ watch kubectl --kubeconfig kubeconfig_cluster_three --insecure-skip-tls-verify g
     ```
   kubectl -n retail-demo get secret demo-reg-token -o 'jsonpath={.data.values}' | base64 --decode > values.yaml
   ```
+
+## Add another cluster
+
+* increase variables.tf value `arm_count` or `amd_count`
+* run / re-run terraform
+
+  * note that re-running terraform means the indices may be out of order
+  
+  ```
+  cd terraform-setup
+  terraform output all_node_ips #identify existing node ips
+  terraform apply
+  cd ..
+  ```
+
+* Add k3s to the new node in the `all_node_ips` list
+
+  ```
+  cd terraform-setup
+  terraform output all_node_ips
+  cd ..
+  make new_node <new node index>
+  ```
+
 
 ### Option 1: Helm Repo Install (cli)
 * Add or update to the rancher stable repo in helm

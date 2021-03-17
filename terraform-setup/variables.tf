@@ -25,3 +25,15 @@ variable "prefix" {
   description = "Prefix added to names of all resources"
   default     = "mak3r"
 }
+
+variable "arm_count" {
+  type        = number
+  description = "Number of arm devices"
+  default     = 1
+}
+
+variable "amd_count" {
+  type        = number
+  description = "Number of amd devices. The minimum is 5"
+  default     = 6
+}
