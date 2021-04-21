@@ -70,7 +70,7 @@ watch kubectl --kubeconfig kubeconfig_cluster_three --insecure-skip-tls-verify g
 ## Add edge fleet
 
 ### Get the registration token from the fleet manager
-* Get your registration token. Here my token in named `demo-reg-token` and sits in namespace `retail-demo`
+* Get your registration token. Here my token is named `demo-reg-token` and sits in namespace `retail-demo`
 
     ```
   kubectl -n retail-demo get secret demo-reg-token -o 'jsonpath={.data.values}' | base64 --decode > values.yaml
