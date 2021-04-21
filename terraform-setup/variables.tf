@@ -1,8 +1,8 @@
-variable "aws_access_key" {
+variable "aws_access_key_id" {
   type        = string
   description = "AWS access key used to create infrastructure"
 }
-variable "aws_secret_key" {
+variable "aws_secret_access_key" {
   type        = string
   description = "AWS secret key used to create AWS infrastructure"
 }
@@ -10,10 +10,6 @@ variable "aws_region" {
   type        = string
   description = "AWS region used for all resources"
   default     = "us-east-1"
-}
-variable "digitalocean_token" {
-  type = string
-  description = "API token for DigitalOcean"
 }
 variable "ssh_key_file_name" {
   type        = string
@@ -35,5 +31,5 @@ variable "arm_count" {
 variable "amd_count" {
   type        = number
   description = "Number of amd devices. The minimum is 5"
-  default     = 6
+  default     = 5
 }

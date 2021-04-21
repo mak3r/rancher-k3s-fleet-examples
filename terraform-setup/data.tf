@@ -27,3 +27,8 @@ data "aws_ami" "arm" {
     values = ["hvm"]
   }
 }
+
+data "aws_route53_zone" "rancher" {
+  name = "mak3r.design."
+  private_zone = false
+}

@@ -5,8 +5,8 @@ SERVER_NUM=-1
 export KUBECONFIG=kubeconfig
 
 destroy:
-	rm kubeconfig kubeconfig_cluster_one kubeconfig_cluster_two kubeconfig_cluster_three \
-	&& cd terraform-setup && terraform destroy -auto-approve && rm terraform.tfstate terraform.tfstate.backup
+	-rm kubeconfig kubeconfig_cluster_one kubeconfig_cluster_two kubeconfig_cluster_three
+	cd terraform-setup && terraform destroy -auto-approve && rm terraform.tfstate terraform.tfstate.backup
 
 all: step_01 sleep step_02 sleep step_03 sleep step_04
 
@@ -52,7 +52,6 @@ step_04:
 	source get_env.sh && echo $${IP0}
 	# curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL=v1.18 K3S_KUBECONFIG_MODE=644 sh -
 	# watch kubectl get nodes,pods,svc -A
-	echo "Creating downstream k3s clusters"
 	source get_env.sh && ssh -o StrictHostKeyChecking=no ubuntu@$${IP3} "curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC='--tls-san $${IP3}' INSTALL_K3S_CHANNEL=v1.18 K3S_KUBECONFIG_MODE=644 sh -"
 	source get_env.sh && scp -o StrictHostKeyChecking=no ubuntu@$${IP3}:/etc/rancher/k3s/k3s.yaml kubeconfig_cluster_one
 	source get_env.sh && sed -i '' "s/127.0.0.1/$${IP3}/g" kubeconfig_cluster_one
@@ -65,5 +64,12 @@ step_04:
 
 add_node:
 	source get_env.sh && ssh -o StrictHostKeyChecking=no ubuntu@$${IP${SERVER_NUM}} "curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC='--tls-san $${IP${SERVER_NUM}}' INSTALL_K3S_CHANNEL=v1.18 K3S_KUBECONFIG_MODE=644 sh -"
-	source get_env.sh && scp -o StrictHostKeyChecking=no ubuntu@$${IP${SERVER_NUM}}:/etc/rancher/k3s/k3s.yaml kubeconfig_cluster_three
+	source get_env.sh && scp -o StrictHostKeyChecking=no ubuntu@$${IP${SERVER_NUM}}:/etc/rancher/k3s/k3s.yaml kubeconfig_cluster_${SERVER_NUM} && sed -i "" 's/default/00${SERVER_NUM}/g' ./kubeconfig_cluster_${SERVER_NUM}
 	source get_env.sh && sed -i '' "s/127.0.0.1/$${IP${SERVER_NUM}}/g" kubeconfig_cluster_three
+
+one_kubeconfig:
+	sed -i "" 's/default/one/g' ./kubeconfig_cluster_one
+	sed -i "" 's/default/two/g' ./kubeconfig_cluster_two
+	sed -i "" 's/default/three/g' ./kubeconfig_cluster_three
+	sed -i "" 's/default/rancher/g' ./kubeconfig
+	KUBECONFIG=./kubeconfig:./kubeconfig_cluster_one:./kubeconfig_cluster_two:./kubeconfig_cluster_three kubectl config view --flatten > ./kubeconfig_all

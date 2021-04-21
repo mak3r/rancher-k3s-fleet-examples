@@ -39,14 +39,11 @@ resource "aws_elb" "rancher-server-lb" {
   }
 }
 
-data "digitalocean_domain" "rancher" {
-  name = "mak3r.design"
-}
+resource "aws_route53_record" "rancher" {
+  zone_id = data.aws_route53_zone.rancher.zone_id
+  name    = "rancher-demo.${data.aws_route53_zone.rancher.name}"
+  type    = "CNAME"
+  ttl     = "5"
 
-resource "digitalocean_record" "rancher" {
-  domain = data.digitalocean_domain.rancher.name
-  type   = "CNAME"
-  name   = "rancher-demo"
-  value  = "${aws_elb.rancher-server-lb.dns_name}."
-  ttl    = 60
+  records        = ["${aws_elb.rancher-server-lb.dns_name}."]
 }
