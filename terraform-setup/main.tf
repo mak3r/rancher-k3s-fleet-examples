@@ -51,3 +51,17 @@ resource "aws_instance" "arm_vms" {
     Name = "${var.prefix}-rancher-k3s-fleet-arm"
   }
 }
+
+resource "aws_instance" "gpu_vms" {
+  count         = var.demo_gpu ? var.gpu_count : 0
+  ami           = data.aws_ami.ubuntu.id
+  instance_type = "p4d.24xlarge"
+
+  key_name        = aws_key_pair.ssh_key_pair.key_name
+  security_groups = [aws_security_group.sg_allowall.name]
+
+  tags = {
+    Name = "${var.prefix}-rancher-k3s-fleet-gpu"
+    demo = "NVIDIA MIG"
+  }
+}

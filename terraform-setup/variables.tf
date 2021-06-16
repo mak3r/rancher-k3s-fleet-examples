@@ -33,3 +33,15 @@ variable "amd_count" {
   description = "Number of amd devices. The minimum is 5"
   default     = 5
 }
+
+variable "gpu_count" {
+  type        = number
+  description = "Number of amd devices. The minimum is 1"
+  default     = 1
+}
+
+variable "demo_gpu" {
+  type        = bool
+  description = "true if a GPU resource should get created. Default false"
+  default     = false
+}

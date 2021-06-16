@@ -4,11 +4,10 @@ output "ubuntu_node_ips" {
 output "arm_node_ips" {
   value = aws_instance.arm_vms.*.public_ip
 }
-/*
-output "rancher_domain" {
-  value = digitalocean_record.rancher.fqdn
+output "gpu_node_ips" {
+  value = aws_instance.gpu_vms.*.public_ip
 }
-*/
+
 output "rancher_domain" {
   value = data.aws_route53_zone.rancher.name
 }
@@ -23,5 +22,6 @@ output "all_node_ips" {
   value = concat(
     aws_instance.ubuntu_vms.*.public_ip,
     aws_instance.arm_vms.*.public_ip,
+	aws_instance.gpu_vms.*.public_ip,
   )
 }

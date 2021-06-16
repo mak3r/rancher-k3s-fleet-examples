@@ -1,0 +1,1611 @@
+2021/05/26 19:21:19 [INFO] Terraform version: 0.14.0  
+2021/05/26 19:21:19 [INFO] Go runtime version: go1.15.5
+2021/05/26 19:21:19 [INFO] CLI args: []string{"/usr/local/bin/terraform", "destroy", "-auto-approve"}
+2021/05/26 19:21:19 [DEBUG] Attempting to open CLI config file: /Users/markabrams/.terraformrc
+2021/05/26 19:21:19 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2021/05/26 19:21:19 [DEBUG] checking for credentials in "/Users/markabrams/.terraform.d/plugins"
+2021/05/26 19:21:19 [DEBUG] checking for credentials in "/Users/markabrams/.terraform.d/plugins/darwin_amd64"
+2021/05/26 19:21:19 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2021/05/26 19:21:19 [DEBUG] will search for provider plugins in /Users/markabrams/.terraform.d/plugins
+2021/05/26 19:21:19 [TRACE] getproviders.SearchLocalDirectory: /Users/markabrams/.terraform.d/plugins is a symlink to /Users/markabrams/.terraform.d/plugins
+2021/05/26 19:21:19 [DEBUG] ignoring non-existing provider search directory /Users/markabrams/Library/Application Support/io.terraform/plugins
+2021/05/26 19:21:19 [DEBUG] ignoring non-existing provider search directory /Library/Application Support/io.terraform/plugins
+2021/05/26 19:21:19 [INFO] CLI command args: []string{"destroy", "-auto-approve"}
+2021/05/26 19:21:19 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2021/05/26 19:21:19 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2021/05/26 19:21:19 [DEBUG] New state was assigned lineage "60a52422-fbbe-0457-bb0f-74f4389b466f"
+2021/05/26 19:21:19 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2021/05/26 19:21:19 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2021/05/26 19:21:19 [TRACE] providercache.fillMetaCache: scanning directory .terraform/providers
+2021/05/26 19:21:19 [TRACE] getproviders.SearchLocalDirectory: .terraform/providers is a symlink to .terraform/providers
+2021/05/26 19:21:19 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/digitalocean/digitalocean v2.2.0 for darwin_amd64 at .terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.2.0/darwin_amd64
+2021/05/26 19:21:19 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/hashicorp/aws v3.19.0 for darwin_amd64 at .terraform/providers/registry.terraform.io/hashicorp/aws/3.19.0/darwin_amd64
+2021/05/26 19:21:19 [TRACE] providercache.fillMetaCache: including .terraform/providers/registry.terraform.io/hashicorp/aws/3.19.0/darwin_amd64 as a candidate package for registry.terraform.io/hashicorp/aws 3.19.0
+2021/05/26 19:21:19 [TRACE] providercache.fillMetaCache: including .terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.2.0/darwin_amd64 as a candidate package for registry.terraform.io/digitalocean/digitalocean 2.2.0
+2021/05/26 19:21:20 [TRACE] providercache.fillMetaCache: using cached result from previous scan of .terraform/providers
+2021/05/26 19:21:20 [DEBUG] checking for provisioner in "."
+2021/05/26 19:21:20 [DEBUG] checking for provisioner in "/usr/local/bin"
+2021/05/26 19:21:20 [DEBUG] checking for provisioner in "/Users/markabrams/.terraform.d/plugins"
+2021/05/26 19:21:20 [DEBUG] checking for provisioner in "/Users/markabrams/.terraform.d/plugins/darwin_amd64"
+2021/05/26 19:21:20 [INFO] Failed to read plugin lock file .terraform/plugins/darwin_amd64/lock.json: open .terraform/plugins/darwin_amd64/lock.json: no such file or directory
+2021/05/26 19:21:20 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2021/05/26 19:21:20 [INFO] backend/local: starting Apply operation
+2021/05/26 19:21:20 [TRACE] backend/local: requesting state manager for workspace "default"
+2021/05/26 19:21:20 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2021/05/26 19:21:20 [TRACE] backend/local: requesting state lock for workspace "default"
+2021/05/26 19:21:20 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2021/05/26 19:21:20 [TRACE] statemgr.Filesystem: no previously-stored snapshot exists
+2021/05/26 19:21:20 [TRACE] statemgr.Filesystem: locking terraform.tfstate using fcntl flock
+2021/05/26 19:21:20 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2021/05/26 19:21:20 [TRACE] backend/local: reading remote state for workspace "default"
+2021/05/26 19:21:20 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2021/05/26 19:21:20 [TRACE] statemgr.Filesystem: snapshot file has nil snapshot, but that's okay
+2021/05/26 19:21:20 [TRACE] statemgr.Filesystem: read nil snapshot
+2021/05/26 19:21:20 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2021/05/26 19:21:20 [TRACE] backend/local: building context for current working directory
+2021/05/26 19:21:20 [TRACE] terraform.NewContext: starting
+2021/05/26 19:21:20 [TRACE] terraform.NewContext: loading provider schemas
+2021/05/26 19:21:20 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/digitalocean/digitalocean"
+2021-05-26T19:21:20.083-0400 [INFO]  plugin: configuring client automatic mTLS
+2021-05-26T19:21:20.106-0400 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.2.0/darwin_amd64/terraform-provider-digitalocean_v2.2.0 args=[.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.2.0/darwin_amd64/terraform-provider-digitalocean_v2.2.0]
+2021-05-26T19:21:20.109-0400 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.2.0/darwin_amd64/terraform-provider-digitalocean_v2.2.0 pid=12012
+2021-05-26T19:21:20.109-0400 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.2.0/darwin_amd64/terraform-provider-digitalocean_v2.2.0
+2021-05-26T19:21:20.124-0400 [INFO]  plugin.terraform-provider-digitalocean_v2.2.0: configuring server automatic mTLS: timestamp=2021-05-26T19:21:20.124-0400
+2021-05-26T19:21:20.148-0400 [DEBUG] plugin: using plugin: version=5
+2021-05-26T19:21:20.148-0400 [DEBUG] plugin.terraform-provider-digitalocean_v2.2.0: plugin address: address=/var/folders/8w/vcjn9by91wg1rc4fg9jykvxm0000gn/T/plugin970439627 network=unix timestamp=2021-05-26T19:21:20.148-0400
+2021/05/26 19:21:20 [TRACE] GRPCProvider: GetSchema
+2021-05-26T19:21:20.200-0400 [TRACE] plugin.stdio: waiting for stdio data
+2021/05/26 19:21:20 [TRACE] GRPCProvider: Close
+2021-05-26T19:21:20.207-0400 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-05-26T19:21:20.208-0400 [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.2.0/darwin_amd64/terraform-provider-digitalocean_v2.2.0 pid=12012
+2021-05-26T19:21:20.208-0400 [DEBUG] plugin: plugin exited
+2021/05/26 19:21:20 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/hashicorp/aws"
+2021-05-26T19:21:20.208-0400 [INFO]  plugin: configuring client automatic mTLS
+2021-05-26T19:21:20.230-0400 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.19.0/darwin_amd64/terraform-provider-aws_v3.19.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/aws/3.19.0/darwin_amd64/terraform-provider-aws_v3.19.0_x5]
+2021-05-26T19:21:20.240-0400 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.19.0/darwin_amd64/terraform-provider-aws_v3.19.0_x5 pid=12013
+2021-05-26T19:21:20.240-0400 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.19.0/darwin_amd64/terraform-provider-aws_v3.19.0_x5
+2021-05-26T19:21:20.276-0400 [INFO]  plugin.terraform-provider-aws_v3.19.0_x5: configuring server automatic mTLS: timestamp=2021-05-26T19:21:20.276-0400
+2021-05-26T19:21:20.303-0400 [DEBUG] plugin: using plugin: version=5
+2021-05-26T19:21:20.303-0400 [DEBUG] plugin.terraform-provider-aws_v3.19.0_x5: plugin address: address=/var/folders/8w/vcjn9by91wg1rc4fg9jykvxm0000gn/T/plugin153356472 network=unix timestamp=2021-05-26T19:21:20.303-0400
+2021/05/26 19:21:20 [TRACE] GRPCProvider: GetSchema
+2021-05-26T19:21:20.350-0400 [TRACE] plugin.stdio: waiting for stdio data
+2021/05/26 19:21:20 [TRACE] GRPCProvider: Close
+2021-05-26T19:21:20.414-0400 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-05-26T19:21:20.417-0400 [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.19.0/darwin_amd64/terraform-provider-aws_v3.19.0_x5 pid=12013
+2021-05-26T19:21:20.417-0400 [DEBUG] plugin: plugin exited
+2021/05/26 19:21:20 [TRACE] terraform.NewContext: complete
+2021/05/26 19:21:20 [TRACE] backend/local: finished building terraform.Context
+2021/05/26 19:21:20 [TRACE] backend/local: requesting interactive input, if necessary
+2021/05/26 19:21:20 [TRACE] Context.Input: Prompting for provider arguments
+2021/05/26 19:21:20 [TRACE] Context.Input: Provider provider.aws declared at provider.tf:13,1-15
+2021/05/26 19:21:20 [TRACE] Context.Input: Provider provider.digitalocean declared at provider.tf:19,1-24
+2021/05/26 19:21:20 [TRACE] Context.Input: Input for provider.aws: map[string]cty.Value{}
+2021/05/26 19:21:20 [TRACE] Context.Input: Input for provider.digitalocean: map[string]cty.Value{}
+2021/05/26 19:21:20 [TRACE] backend/local: running validation operation
+2021/05/26 19:21:20 [INFO] terraform: building graph: GraphTypeValidate
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2021/05/26 19:21:20 [TRACE] ConfigTransformer: Starting for path: 
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  aws_elb.rancher-server-lb - *terraform.NodeValidatableResource
+  aws_instance.arm_vms - *terraform.NodeValidatableResource
+  aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+  aws_key_pair.ssh_key_pair - *terraform.NodeValidatableResource
+  aws_route53_record.rancher - *terraform.NodeValidatableResource
+  aws_security_group.sg_allowall - *terraform.NodeValidatableResource
+  data.aws_ami.arm - *terraform.NodeValidatableResource
+  data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+  data.aws_route53_zone.rancher - *terraform.NodeValidatableResource
+  ------
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  aws_elb.rancher-server-lb - *terraform.NodeValidatableResource
+  aws_instance.arm_vms - *terraform.NodeValidatableResource
+  aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+  aws_key_pair.ssh_key_pair - *terraform.NodeValidatableResource
+  aws_route53_record.rancher - *terraform.NodeValidatableResource
+  aws_security_group.sg_allowall - *terraform.NodeValidatableResource
+  data.aws_ami.arm - *terraform.NodeValidatableResource
+  data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+  data.aws_route53_zone.rancher - *terraform.NodeValidatableResource
+  var.amd_count - *terraform.NodeRootVariable
+  var.arm_count - *terraform.NodeRootVariable
+  var.aws_access_key_id - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.aws_secret_access_key - *terraform.NodeRootVariable
+  var.prefix - *terraform.NodeRootVariable
+  var.ssh_key_file_name - *terraform.NodeRootVariable
+  ------
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.LocalTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.OutputTransformer
+2021/05/26 19:21:20 [TRACE] OutputTransformer: adding ubuntu_node_ips as *terraform.NodeApplyableOutput
+2021/05/26 19:21:20 [TRACE] OutputTransformer: adding arm_node_ips as *terraform.NodeApplyableOutput
+2021/05/26 19:21:20 [TRACE] OutputTransformer: adding rancher_domain as *terraform.NodeApplyableOutput
+2021/05/26 19:21:20 [TRACE] OutputTransformer: adding rancher_cluster_ips as *terraform.NodeApplyableOutput
+2021/05/26 19:21:20 [TRACE] OutputTransformer: adding all_node_ips as *terraform.NodeApplyableOutput
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+  aws_elb.rancher-server-lb - *terraform.NodeValidatableResource
+  aws_instance.arm_vms - *terraform.NodeValidatableResource
+  aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+  aws_key_pair.ssh_key_pair - *terraform.NodeValidatableResource
+  aws_route53_record.rancher - *terraform.NodeValidatableResource
+  aws_security_group.sg_allowall - *terraform.NodeValidatableResource
+  data.aws_ami.arm - *terraform.NodeValidatableResource
+  data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+  data.aws_route53_zone.rancher - *terraform.NodeValidatableResource
+  output.all_node_ips - *terraform.NodeApplyableOutput
+  output.arm_node_ips - *terraform.NodeApplyableOutput
+  output.rancher_cluster_ips - *terraform.NodeApplyableOutput
+  output.rancher_domain - *terraform.NodeApplyableOutput
+  output.ubuntu_node_ips - *terraform.NodeApplyableOutput
+  var.amd_count - *terraform.NodeRootVariable
+  var.arm_count - *terraform.NodeRootVariable
+  var.aws_access_key_id - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.aws_secret_access_key - *terraform.NodeRootVariable
+  var.prefix - *terraform.NodeRootVariable
+  var.ssh_key_file_name - *terraform.NodeRootVariable
+  ------
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.StateTransformer
+2021/05/26 19:21:20 [TRACE] StateTransformer: state is empty, so nothing to do
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching to "aws_route53_record.rancher" (*terraform.NodeValidatableResource) config from lb.tf:42,1-40
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_route53_record.rancher
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching to "aws_key_pair.ssh_key_pair" (*terraform.NodeValidatableResource) config from main.tf:1,1-39
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_key_pair.ssh_key_pair
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching to "data.aws_ami.arm" (*terraform.NodeValidatableResource) config from hcl.Range{Filename:"data.tf", Start:hcl.Pos{Line:16, Column:1, Byte:276}, End:hcl.Pos{Line:16, Column:21, Byte:296}}
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.aws_ami.arm
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching to "aws_security_group.sg_allowall" (*terraform.NodeValidatableResource) config from main.tf:7,1-44
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_security_group.sg_allowall
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching to "aws_instance.ubuntu_vms" (*terraform.NodeValidatableResource) config from main.tf:25,1-37
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_instance.ubuntu_vms
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching to "aws_instance.arm_vms" (*terraform.NodeValidatableResource) config from main.tf:42,1-34
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_instance.arm_vms
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching to "data.aws_route53_zone.rancher" (*terraform.NodeValidatableResource) config from hcl.Range{Filename:"data.tf", Start:hcl.Pos{Line:31, Column:1, Byte:549}, End:hcl.Pos{Line:31, Column:34, Byte:582}}
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.aws_route53_zone.rancher
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching to "aws_elb.rancher-server-lb" (*terraform.NodeValidatableResource) config from lb.tf:1,1-39
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_elb.rancher-server-lb
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching to "data.aws_ami.ubuntu" (*terraform.NodeValidatableResource) config from hcl.Range{Filename:"data.tf", Start:hcl.Pos{Line:1, Column:1, Byte:0}, End:hcl.Pos{Line:1, Column:24, Byte:23}}
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.aws_ami.ubuntu
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2021/05/26 19:21:20 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/aws\"]" provider configuration from provider.tf:13,1-15
+2021/05/26 19:21:20 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/digitalocean/digitalocean\"]" provider configuration from provider.tf:19,1-24
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  aws_elb.rancher-server-lb - *terraform.NodeValidatableResource
+  aws_instance.arm_vms - *terraform.NodeValidatableResource
+  aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+  aws_key_pair.ssh_key_pair - *terraform.NodeValidatableResource
+  aws_route53_record.rancher - *terraform.NodeValidatableResource
+  aws_security_group.sg_allowall - *terraform.NodeValidatableResource
+  data.aws_ami.arm - *terraform.NodeValidatableResource
+  data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+  data.aws_route53_zone.rancher - *terraform.NodeValidatableResource
+  output.all_node_ips - *terraform.NodeApplyableOutput
+  output.arm_node_ips - *terraform.NodeApplyableOutput
+  output.rancher_cluster_ips - *terraform.NodeApplyableOutput
+  output.rancher_domain - *terraform.NodeApplyableOutput
+  output.ubuntu_node_ips - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.amd_count - *terraform.NodeRootVariable
+  var.arm_count - *terraform.NodeRootVariable
+  var.aws_access_key_id - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.aws_secret_access_key - *terraform.NodeRootVariable
+  var.prefix - *terraform.NodeRootVariable
+  var.ssh_key_file_name - *terraform.NodeRootVariable
+  ------
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2021/05/26 19:21:20 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_key_pair.ssh_key_pair
+2021/05/26 19:21:20 [DEBUG] ProviderTransformer: "aws_key_pair.ssh_key_pair" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/05/26 19:21:20 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving data.aws_ami.arm
+2021/05/26 19:21:20 [DEBUG] ProviderTransformer: "data.aws_ami.arm" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/05/26 19:21:20 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_security_group.sg_allowall
+2021/05/26 19:21:20 [DEBUG] ProviderTransformer: "aws_security_group.sg_allowall" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/05/26 19:21:20 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_elb.rancher-server-lb
+2021/05/26 19:21:20 [DEBUG] ProviderTransformer: "aws_elb.rancher-server-lb" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/05/26 19:21:20 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_route53_record.rancher
+2021/05/26 19:21:20 [DEBUG] ProviderTransformer: "aws_route53_record.rancher" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/05/26 19:21:20 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_instance.arm_vms
+2021/05/26 19:21:20 [DEBUG] ProviderTransformer: "aws_instance.arm_vms" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/05/26 19:21:20 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving data.aws_route53_zone.rancher
+2021/05/26 19:21:20 [DEBUG] ProviderTransformer: "data.aws_route53_zone.rancher" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/05/26 19:21:20 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving data.aws_ami.ubuntu
+2021/05/26 19:21:20 [DEBUG] ProviderTransformer: "data.aws_ami.ubuntu" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/05/26 19:21:20 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_instance.ubuntu_vms
+2021/05/26 19:21:20 [DEBUG] ProviderTransformer: "aws_instance.ubuntu_vms" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  aws_elb.rancher-server-lb - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.arm_vms - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_key_pair.ssh_key_pair - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_route53_record.rancher - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.sg_allowall - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_ami.arm - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_route53_zone.rancher - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.all_node_ips - *terraform.NodeApplyableOutput
+  output.arm_node_ips - *terraform.NodeApplyableOutput
+  output.rancher_cluster_ips - *terraform.NodeApplyableOutput
+  output.rancher_domain - *terraform.NodeApplyableOutput
+  output.ubuntu_node_ips - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.amd_count - *terraform.NodeRootVariable
+  var.arm_count - *terraform.NodeRootVariable
+  var.aws_access_key_id - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.aws_secret_access_key - *terraform.NodeRootVariable
+  var.prefix - *terraform.NodeRootVariable
+  var.ssh_key_file_name - *terraform.NodeRootVariable
+  ------
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2021/05/26 19:21:20 [DEBUG] pruning unused provider["registry.terraform.io/digitalocean/digitalocean"]
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer with new graph:
+  aws_elb.rancher-server-lb - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.arm_vms - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_key_pair.ssh_key_pair - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_route53_record.rancher - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.sg_allowall - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_ami.arm - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_route53_zone.rancher - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.all_node_ips - *terraform.NodeApplyableOutput
+  output.arm_node_ips - *terraform.NodeApplyableOutput
+  output.rancher_cluster_ips - *terraform.NodeApplyableOutput
+  output.rancher_domain - *terraform.NodeApplyableOutput
+  output.ubuntu_node_ips - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.amd_count - *terraform.NodeRootVariable
+  var.arm_count - *terraform.NodeRootVariable
+  var.aws_access_key_id - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.aws_secret_access_key - *terraform.NodeRootVariable
+  var.prefix - *terraform.NodeRootVariable
+  var.ssh_key_file_name - *terraform.NodeRootVariable
+  ------
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  aws_elb.rancher-server-lb - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.arm_vms - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_key_pair.ssh_key_pair - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_route53_record.rancher - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.sg_allowall - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_ami.arm - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_route53_zone.rancher - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.all_node_ips - *terraform.NodeApplyableOutput
+  output.arm_node_ips - *terraform.NodeApplyableOutput
+  output.rancher_cluster_ips - *terraform.NodeApplyableOutput
+  output.rancher_domain - *terraform.NodeApplyableOutput
+  output.ubuntu_node_ips - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.amd_count - *terraform.NodeRootVariable
+  var.arm_count - *terraform.NodeRootVariable
+  var.aws_access_key_id - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.aws_secret_access_key - *terraform.NodeRootVariable
+  var.prefix - *terraform.NodeRootVariable
+  var.ssh_key_file_name - *terraform.NodeRootVariable
+  ------
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2021/05/26 19:21:20 [TRACE] AttachSchemaTransformer: attaching resource schema to data.aws_ami.ubuntu
+2021/05/26 19:21:20 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/aws"]
+2021/05/26 19:21:20 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_route53_record.rancher
+2021/05/26 19:21:20 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_key_pair.ssh_key_pair
+2021/05/26 19:21:20 [TRACE] AttachSchemaTransformer: attaching resource schema to data.aws_ami.arm
+2021/05/26 19:21:20 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_security_group.sg_allowall
+2021/05/26 19:21:20 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_instance.ubuntu_vms
+2021/05/26 19:21:20 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_instance.arm_vms
+2021/05/26 19:21:20 [TRACE] AttachSchemaTransformer: attaching resource schema to data.aws_route53_zone.rancher
+2021/05/26 19:21:20 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_elb.rancher-server-lb
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "data.aws_ami.ubuntu" references: []
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "var.aws_secret_access_key" references: []
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "var.ssh_key_file_name" references: []
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "output.rancher_domain" references: [data.aws_route53_zone.rancher]
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "output.rancher_cluster_ips" references: [aws_instance.ubuntu_vms aws_instance.ubuntu_vms aws_instance.ubuntu_vms]
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "var.amd_count" references: []
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: [var.aws_access_key_id var.aws_region var.aws_secret_access_key]
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "aws_route53_record.rancher" references: [data.aws_route53_zone.rancher data.aws_route53_zone.rancher aws_elb.rancher-server-lb]
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "aws_key_pair.ssh_key_pair" references: [var.prefix var.ssh_key_file_name]
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "data.aws_ami.arm" references: []
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "var.aws_access_key_id" references: []
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "var.prefix" references: []
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "output.ubuntu_node_ips" references: [aws_instance.ubuntu_vms]
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "output.all_node_ips" references: [aws_instance.ubuntu_vms aws_instance.arm_vms]
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "aws_security_group.sg_allowall" references: [var.prefix]
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "aws_instance.ubuntu_vms" references: [var.amd_count aws_key_pair.ssh_key_pair aws_security_group.sg_allowall data.aws_ami.ubuntu var.prefix]
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "aws_instance.arm_vms" references: [var.arm_count aws_key_pair.ssh_key_pair aws_security_group.sg_allowall data.aws_ami.arm var.prefix]
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "data.aws_route53_zone.rancher" references: []
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "var.arm_count" references: []
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "aws_elb.rancher-server-lb" references: [var.prefix aws_instance.ubuntu_vms aws_instance.ubuntu_vms aws_instance.ubuntu_vms var.prefix aws_instance.ubuntu_vms]
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "var.aws_region" references: []
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "output.arm_node_ips" references: [aws_instance.arm_vms]
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  aws_elb.rancher-server-lb - *terraform.NodeValidatableResource
+    aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+  aws_instance.arm_vms - *terraform.NodeValidatableResource
+    aws_key_pair.ssh_key_pair - *terraform.NodeValidatableResource
+    aws_security_group.sg_allowall - *terraform.NodeValidatableResource
+    data.aws_ami.arm - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.arm_count - *terraform.NodeRootVariable
+    var.prefix - *terraform.NodeRootVariable
+  aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+    aws_key_pair.ssh_key_pair - *terraform.NodeValidatableResource
+    aws_security_group.sg_allowall - *terraform.NodeValidatableResource
+    data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.amd_count - *terraform.NodeRootVariable
+    var.prefix - *terraform.NodeRootVariable
+  aws_key_pair.ssh_key_pair - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.ssh_key_file_name - *terraform.NodeRootVariable
+  aws_route53_record.rancher - *terraform.NodeValidatableResource
+    aws_elb.rancher-server-lb - *terraform.NodeValidatableResource
+    data.aws_route53_zone.rancher - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.sg_allowall - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+  data.aws_ami.arm - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_route53_zone.rancher - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.all_node_ips - *terraform.NodeApplyableOutput
+    aws_instance.arm_vms - *terraform.NodeValidatableResource
+    aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+  output.arm_node_ips - *terraform.NodeApplyableOutput
+    aws_instance.arm_vms - *terraform.NodeValidatableResource
+  output.rancher_cluster_ips - *terraform.NodeApplyableOutput
+    aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+  output.rancher_domain - *terraform.NodeApplyableOutput
+    data.aws_route53_zone.rancher - *terraform.NodeValidatableResource
+  output.ubuntu_node_ips - *terraform.NodeApplyableOutput
+    aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.aws_access_key_id - *terraform.NodeRootVariable
+    var.aws_region - *terraform.NodeRootVariable
+    var.aws_secret_access_key - *terraform.NodeRootVariable
+  var.amd_count - *terraform.NodeRootVariable
+  var.arm_count - *terraform.NodeRootVariable
+  var.aws_access_key_id - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.aws_secret_access_key - *terraform.NodeRootVariable
+  var.prefix - *terraform.NodeRootVariable
+  var.ssh_key_file_name - *terraform.NodeRootVariable
+  ------
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2021/05/26 19:21:20 [TRACE] attachDataDependenciesTransformer: data.aws_route53_zone.rancher depends on []
+2021/05/26 19:21:20 [TRACE] attachDataDependenciesTransformer: data.aws_ami.ubuntu depends on []
+2021/05/26 19:21:20 [TRACE] attachDataDependenciesTransformer: data.aws_ami.arm depends on []
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  aws_elb.rancher-server-lb - *terraform.NodeValidatableResource
+    aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+  aws_instance.arm_vms - *terraform.NodeValidatableResource
+    aws_key_pair.ssh_key_pair - *terraform.NodeValidatableResource
+    aws_security_group.sg_allowall - *terraform.NodeValidatableResource
+    data.aws_ami.arm - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.arm_count - *terraform.NodeRootVariable
+    var.prefix - *terraform.NodeRootVariable
+  aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+    aws_key_pair.ssh_key_pair - *terraform.NodeValidatableResource
+    aws_security_group.sg_allowall - *terraform.NodeValidatableResource
+    data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.amd_count - *terraform.NodeRootVariable
+    var.prefix - *terraform.NodeRootVariable
+  aws_key_pair.ssh_key_pair - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.ssh_key_file_name - *terraform.NodeRootVariable
+  aws_route53_record.rancher - *terraform.NodeValidatableResource
+    aws_elb.rancher-server-lb - *terraform.NodeValidatableResource
+    data.aws_route53_zone.rancher - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.sg_allowall - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+  data.aws_ami.arm - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_route53_zone.rancher - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_elb.rancher-server-lb - *terraform.NodeValidatableResource
+    aws_instance.arm_vms - *terraform.NodeValidatableResource
+    aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+    aws_key_pair.ssh_key_pair - *terraform.NodeValidatableResource
+    aws_route53_record.rancher - *terraform.NodeValidatableResource
+    aws_security_group.sg_allowall - *terraform.NodeValidatableResource
+    data.aws_ami.arm - *terraform.NodeValidatableResource
+    data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    data.aws_route53_zone.rancher - *terraform.NodeValidatableResource
+    output.all_node_ips - *terraform.NodeApplyableOutput
+    output.arm_node_ips - *terraform.NodeApplyableOutput
+    output.rancher_cluster_ips - *terraform.NodeApplyableOutput
+    output.rancher_domain - *terraform.NodeApplyableOutput
+    output.ubuntu_node_ips - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.amd_count - *terraform.NodeRootVariable
+    var.arm_count - *terraform.NodeRootVariable
+    var.aws_access_key_id - *terraform.NodeRootVariable
+    var.aws_region - *terraform.NodeRootVariable
+    var.aws_secret_access_key - *terraform.NodeRootVariable
+    var.prefix - *terraform.NodeRootVariable
+    var.ssh_key_file_name - *terraform.NodeRootVariable
+  output.all_node_ips - *terraform.NodeApplyableOutput
+    aws_instance.arm_vms - *terraform.NodeValidatableResource
+    aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+  output.arm_node_ips - *terraform.NodeApplyableOutput
+    aws_instance.arm_vms - *terraform.NodeValidatableResource
+  output.rancher_cluster_ips - *terraform.NodeApplyableOutput
+    aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+  output.rancher_domain - *terraform.NodeApplyableOutput
+    data.aws_route53_zone.rancher - *terraform.NodeValidatableResource
+  output.ubuntu_node_ips - *terraform.NodeApplyableOutput
+    aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.aws_access_key_id - *terraform.NodeRootVariable
+    var.aws_region - *terraform.NodeRootVariable
+    var.aws_secret_access_key - *terraform.NodeRootVariable
+  var.amd_count - *terraform.NodeRootVariable
+  var.arm_count - *terraform.NodeRootVariable
+  var.aws_access_key_id - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.aws_secret_access_key - *terraform.NodeRootVariable
+  var.prefix - *terraform.NodeRootVariable
+  var.ssh_key_file_name - *terraform.NodeRootVariable
+  ------
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  aws_elb.rancher-server-lb - *terraform.NodeValidatableResource
+    aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+  aws_instance.arm_vms - *terraform.NodeValidatableResource
+    aws_key_pair.ssh_key_pair - *terraform.NodeValidatableResource
+    aws_security_group.sg_allowall - *terraform.NodeValidatableResource
+    data.aws_ami.arm - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.arm_count - *terraform.NodeRootVariable
+    var.prefix - *terraform.NodeRootVariable
+  aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+    aws_key_pair.ssh_key_pair - *terraform.NodeValidatableResource
+    aws_security_group.sg_allowall - *terraform.NodeValidatableResource
+    data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.amd_count - *terraform.NodeRootVariable
+    var.prefix - *terraform.NodeRootVariable
+  aws_key_pair.ssh_key_pair - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.ssh_key_file_name - *terraform.NodeRootVariable
+  aws_route53_record.rancher - *terraform.NodeValidatableResource
+    aws_elb.rancher-server-lb - *terraform.NodeValidatableResource
+    data.aws_route53_zone.rancher - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.sg_allowall - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+  data.aws_ami.arm - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_route53_zone.rancher - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_elb.rancher-server-lb - *terraform.NodeValidatableResource
+    aws_instance.arm_vms - *terraform.NodeValidatableResource
+    aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+    aws_key_pair.ssh_key_pair - *terraform.NodeValidatableResource
+    aws_route53_record.rancher - *terraform.NodeValidatableResource
+    aws_security_group.sg_allowall - *terraform.NodeValidatableResource
+    data.aws_ami.arm - *terraform.NodeValidatableResource
+    data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    data.aws_route53_zone.rancher - *terraform.NodeValidatableResource
+    output.all_node_ips - *terraform.NodeApplyableOutput
+    output.arm_node_ips - *terraform.NodeApplyableOutput
+    output.rancher_cluster_ips - *terraform.NodeApplyableOutput
+    output.rancher_domain - *terraform.NodeApplyableOutput
+    output.ubuntu_node_ips - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.amd_count - *terraform.NodeRootVariable
+    var.arm_count - *terraform.NodeRootVariable
+    var.aws_access_key_id - *terraform.NodeRootVariable
+    var.aws_region - *terraform.NodeRootVariable
+    var.aws_secret_access_key - *terraform.NodeRootVariable
+    var.prefix - *terraform.NodeRootVariable
+    var.ssh_key_file_name - *terraform.NodeRootVariable
+  output.all_node_ips - *terraform.NodeApplyableOutput
+    aws_instance.arm_vms - *terraform.NodeValidatableResource
+    aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+  output.arm_node_ips - *terraform.NodeApplyableOutput
+    aws_instance.arm_vms - *terraform.NodeValidatableResource
+  output.rancher_cluster_ips - *terraform.NodeApplyableOutput
+    aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+  output.rancher_domain - *terraform.NodeApplyableOutput
+    data.aws_route53_zone.rancher - *terraform.NodeValidatableResource
+  output.ubuntu_node_ips - *terraform.NodeApplyableOutput
+    aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.aws_access_key_id - *terraform.NodeRootVariable
+    var.aws_region - *terraform.NodeRootVariable
+    var.aws_secret_access_key - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_elb.rancher-server-lb - *terraform.NodeValidatableResource
+    aws_instance.arm_vms - *terraform.NodeValidatableResource
+    aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+    aws_key_pair.ssh_key_pair - *terraform.NodeValidatableResource
+    aws_route53_record.rancher - *terraform.NodeValidatableResource
+    aws_security_group.sg_allowall - *terraform.NodeValidatableResource
+    data.aws_ami.arm - *terraform.NodeValidatableResource
+    data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    data.aws_route53_zone.rancher - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.amd_count - *terraform.NodeRootVariable
+  var.arm_count - *terraform.NodeRootVariable
+  var.aws_access_key_id - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.aws_secret_access_key - *terraform.NodeRootVariable
+  var.prefix - *terraform.NodeRootVariable
+  var.ssh_key_file_name - *terraform.NodeRootVariable
+  ------
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  aws_elb.rancher-server-lb - *terraform.NodeValidatableResource
+    aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+  aws_instance.arm_vms - *terraform.NodeValidatableResource
+    aws_key_pair.ssh_key_pair - *terraform.NodeValidatableResource
+    aws_security_group.sg_allowall - *terraform.NodeValidatableResource
+    data.aws_ami.arm - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.arm_count - *terraform.NodeRootVariable
+    var.prefix - *terraform.NodeRootVariable
+  aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+    aws_key_pair.ssh_key_pair - *terraform.NodeValidatableResource
+    aws_security_group.sg_allowall - *terraform.NodeValidatableResource
+    data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.amd_count - *terraform.NodeRootVariable
+    var.prefix - *terraform.NodeRootVariable
+  aws_key_pair.ssh_key_pair - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.ssh_key_file_name - *terraform.NodeRootVariable
+  aws_route53_record.rancher - *terraform.NodeValidatableResource
+    aws_elb.rancher-server-lb - *terraform.NodeValidatableResource
+    data.aws_route53_zone.rancher - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.sg_allowall - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+  data.aws_ami.arm - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_route53_zone.rancher - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_elb.rancher-server-lb - *terraform.NodeValidatableResource
+    aws_instance.arm_vms - *terraform.NodeValidatableResource
+    aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+    aws_key_pair.ssh_key_pair - *terraform.NodeValidatableResource
+    aws_route53_record.rancher - *terraform.NodeValidatableResource
+    aws_security_group.sg_allowall - *terraform.NodeValidatableResource
+    data.aws_ami.arm - *terraform.NodeValidatableResource
+    data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    data.aws_route53_zone.rancher - *terraform.NodeValidatableResource
+    output.all_node_ips - *terraform.NodeApplyableOutput
+    output.arm_node_ips - *terraform.NodeApplyableOutput
+    output.rancher_cluster_ips - *terraform.NodeApplyableOutput
+    output.rancher_domain - *terraform.NodeApplyableOutput
+    output.ubuntu_node_ips - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.amd_count - *terraform.NodeRootVariable
+    var.arm_count - *terraform.NodeRootVariable
+    var.aws_access_key_id - *terraform.NodeRootVariable
+    var.aws_region - *terraform.NodeRootVariable
+    var.aws_secret_access_key - *terraform.NodeRootVariable
+    var.prefix - *terraform.NodeRootVariable
+    var.ssh_key_file_name - *terraform.NodeRootVariable
+  output.all_node_ips - *terraform.NodeApplyableOutput
+    aws_instance.arm_vms - *terraform.NodeValidatableResource
+    aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+  output.arm_node_ips - *terraform.NodeApplyableOutput
+    aws_instance.arm_vms - *terraform.NodeValidatableResource
+  output.rancher_cluster_ips - *terraform.NodeApplyableOutput
+    aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+  output.rancher_domain - *terraform.NodeApplyableOutput
+    data.aws_route53_zone.rancher - *terraform.NodeValidatableResource
+  output.ubuntu_node_ips - *terraform.NodeApplyableOutput
+    aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.aws_access_key_id - *terraform.NodeRootVariable
+    var.aws_region - *terraform.NodeRootVariable
+    var.aws_secret_access_key - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_elb.rancher-server-lb - *terraform.NodeValidatableResource
+    aws_instance.arm_vms - *terraform.NodeValidatableResource
+    aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+    aws_key_pair.ssh_key_pair - *terraform.NodeValidatableResource
+    aws_route53_record.rancher - *terraform.NodeValidatableResource
+    aws_security_group.sg_allowall - *terraform.NodeValidatableResource
+    data.aws_ami.arm - *terraform.NodeValidatableResource
+    data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    data.aws_route53_zone.rancher - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  var.amd_count - *terraform.NodeRootVariable
+  var.arm_count - *terraform.NodeRootVariable
+  var.aws_access_key_id - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.aws_secret_access_key - *terraform.NodeRootVariable
+  var.prefix - *terraform.NodeRootVariable
+  var.ssh_key_file_name - *terraform.NodeRootVariable
+  ------
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  aws_elb.rancher-server-lb - *terraform.NodeValidatableResource
+    aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+  aws_instance.arm_vms - *terraform.NodeValidatableResource
+    aws_key_pair.ssh_key_pair - *terraform.NodeValidatableResource
+    aws_security_group.sg_allowall - *terraform.NodeValidatableResource
+    data.aws_ami.arm - *terraform.NodeValidatableResource
+    var.arm_count - *terraform.NodeRootVariable
+  aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+    aws_key_pair.ssh_key_pair - *terraform.NodeValidatableResource
+    aws_security_group.sg_allowall - *terraform.NodeValidatableResource
+    data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    var.amd_count - *terraform.NodeRootVariable
+  aws_key_pair.ssh_key_pair - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.ssh_key_file_name - *terraform.NodeRootVariable
+  aws_route53_record.rancher - *terraform.NodeValidatableResource
+    aws_elb.rancher-server-lb - *terraform.NodeValidatableResource
+    data.aws_route53_zone.rancher - *terraform.NodeValidatableResource
+  aws_security_group.sg_allowall - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+  data.aws_ami.arm - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_route53_zone.rancher - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_route53_record.rancher - *terraform.NodeValidatableResource
+    output.all_node_ips - *terraform.NodeApplyableOutput
+    output.arm_node_ips - *terraform.NodeApplyableOutput
+    output.rancher_cluster_ips - *terraform.NodeApplyableOutput
+    output.rancher_domain - *terraform.NodeApplyableOutput
+    output.ubuntu_node_ips - *terraform.NodeApplyableOutput
+  output.all_node_ips - *terraform.NodeApplyableOutput
+    aws_instance.arm_vms - *terraform.NodeValidatableResource
+    aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+  output.arm_node_ips - *terraform.NodeApplyableOutput
+    aws_instance.arm_vms - *terraform.NodeValidatableResource
+  output.rancher_cluster_ips - *terraform.NodeApplyableOutput
+    aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+  output.rancher_domain - *terraform.NodeApplyableOutput
+    data.aws_route53_zone.rancher - *terraform.NodeValidatableResource
+  output.ubuntu_node_ips - *terraform.NodeApplyableOutput
+    aws_instance.ubuntu_vms - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.aws_access_key_id - *terraform.NodeRootVariable
+    var.aws_region - *terraform.NodeRootVariable
+    var.aws_secret_access_key - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.arm_vms - *terraform.NodeValidatableResource
+    aws_route53_record.rancher - *terraform.NodeValidatableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  var.amd_count - *terraform.NodeRootVariable
+  var.arm_count - *terraform.NodeRootVariable
+  var.aws_access_key_id - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.aws_secret_access_key - *terraform.NodeRootVariable
+  var.prefix - *terraform.NodeRootVariable
+  var.ssh_key_file_name - *terraform.NodeRootVariable
+  ------
+2021/05/26 19:21:20 [DEBUG] Starting graph walk: walkValidate
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "var.aws_access_key_id"
+2021/05/26 19:21:20 [TRACE] vertex "var.aws_access_key_id": starting visit (*terraform.NodeRootVariable)
+2021/05/26 19:21:20 [TRACE] vertex "var.aws_access_key_id": visit complete
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "var.amd_count"
+2021/05/26 19:21:20 [TRACE] vertex "var.amd_count": starting visit (*terraform.NodeRootVariable)
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "var.arm_count"
+2021/05/26 19:21:20 [TRACE] vertex "var.arm_count": starting visit (*terraform.NodeRootVariable)
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "var.aws_region"
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "var.prefix"
+2021/05/26 19:21:20 [TRACE] vertex "var.arm_count": visit complete
+2021/05/26 19:21:20 [TRACE] vertex "var.prefix": starting visit (*terraform.NodeRootVariable)
+2021/05/26 19:21:20 [TRACE] vertex "var.amd_count": visit complete
+2021/05/26 19:21:20 [TRACE] vertex "var.aws_region": starting visit (*terraform.NodeRootVariable)
+2021/05/26 19:21:20 [TRACE] vertex "var.prefix": visit complete
+2021/05/26 19:21:20 [TRACE] vertex "var.aws_region": visit complete
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "var.aws_secret_access_key"
+2021/05/26 19:21:20 [TRACE] vertex "var.aws_secret_access_key": starting visit (*terraform.NodeRootVariable)
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "var.ssh_key_file_name"
+2021/05/26 19:21:20 [TRACE] vertex "var.aws_secret_access_key": visit complete
+2021/05/26 19:21:20 [TRACE] vertex "var.ssh_key_file_name": starting visit (*terraform.NodeRootVariable)
+2021/05/26 19:21:20 [TRACE] vertex "var.ssh_key_file_name": visit complete
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2021/05/26 19:21:20 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": starting visit (*terraform.NodeApplyableProvider)
+2021-05-26T19:21:20.422-0400 [INFO]  plugin: configuring client automatic mTLS
+2021-05-26T19:21:20.443-0400 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.19.0/darwin_amd64/terraform-provider-aws_v3.19.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/aws/3.19.0/darwin_amd64/terraform-provider-aws_v3.19.0_x5]
+2021-05-26T19:21:20.454-0400 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.19.0/darwin_amd64/terraform-provider-aws_v3.19.0_x5 pid=12014
+2021-05-26T19:21:20.454-0400 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.19.0/darwin_amd64/terraform-provider-aws_v3.19.0_x5
+2021-05-26T19:21:20.490-0400 [INFO]  plugin.terraform-provider-aws_v3.19.0_x5: configuring server automatic mTLS: timestamp=2021-05-26T19:21:20.490-0400
+2021-05-26T19:21:20.517-0400 [DEBUG] plugin: using plugin: version=5
+2021-05-26T19:21:20.517-0400 [DEBUG] plugin.terraform-provider-aws_v3.19.0_x5: plugin address: address=/var/folders/8w/vcjn9by91wg1rc4fg9jykvxm0000gn/T/plugin506754341 network=unix timestamp=2021-05-26T19:21:20.517-0400
+2021/05/26 19:21:20 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/aws\"]" provider for provider["registry.terraform.io/hashicorp/aws"]
+2021/05/26 19:21:20 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/aws"]: using explicit config only
+2021/05/26 19:21:20 [TRACE] GRPCProvider: GetSchema
+2021-05-26T19:21:20.565-0400 [TRACE] plugin.stdio: waiting for stdio data
+2021/05/26 19:21:20 [TRACE] GRPCProvider: PrepareProviderConfig
+2021/05/26 19:21:20 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": visit complete
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "data.aws_ami.arm"
+2021/05/26 19:21:20 [TRACE] vertex "data.aws_ami.arm": starting visit (*terraform.NodeValidatableResource)
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "data.aws_route53_zone.rancher"
+2021/05/26 19:21:20 [TRACE] vertex "data.aws_route53_zone.rancher": starting visit (*terraform.NodeValidatableResource)
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "aws_key_pair.ssh_key_pair"
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "aws_security_group.sg_allowall"
+2021/05/26 19:21:20 [TRACE] vertex "aws_key_pair.ssh_key_pair": starting visit (*terraform.NodeValidatableResource)
+2021/05/26 19:21:20 [TRACE] vertex "aws_security_group.sg_allowall": starting visit (*terraform.NodeValidatableResource)
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "data.aws_ami.ubuntu"
+2021/05/26 19:21:20 [TRACE] vertex "data.aws_ami.ubuntu": starting visit (*terraform.NodeValidatableResource)
+2021/05/26 19:21:20 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2021/05/26 19:21:20 [TRACE] GRPCProvider: ValidateDataSourceConfig
+2021/05/26 19:21:20 [TRACE] GRPCProvider: ValidateDataSourceConfig
+2021/05/26 19:21:20 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2021/05/26 19:21:20 [TRACE] GRPCProvider: ValidateDataSourceConfig
+2021/05/26 19:21:20 [TRACE] vertex "aws_key_pair.ssh_key_pair": visit complete
+2021/05/26 19:21:20 [TRACE] vertex "data.aws_route53_zone.rancher": visit complete
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "output.rancher_domain"
+2021/05/26 19:21:20 [TRACE] vertex "output.rancher_domain": starting visit (*terraform.NodeApplyableOutput)
+2021/05/26 19:21:20 [TRACE] ExecuteWriteOutput: Saving Create change for output.rancher_domain in changeset
+2021/05/26 19:21:20 [TRACE] EvalWriteOutput: Removing output.rancher_domain from state (it is now null)
+2021/05/26 19:21:20 [TRACE] vertex "output.rancher_domain": visit complete
+2021-05-26T19:21:20.688-0400 [DEBUG] plugin.terraform-provider-aws_v3.19.0_x5: 2021/05/26 19:21:20 [WARN] Truncating attribute path of 0 diagnostics for TypeSet
+2021-05-26T19:21:20.688-0400 [DEBUG] plugin.terraform-provider-aws_v3.19.0_x5: 2021/05/26 19:21:20 [WARN] Truncating attribute path of 0 diagnostics for TypeSet
+2021-05-26T19:21:20.688-0400 [DEBUG] plugin.terraform-provider-aws_v3.19.0_x5: 2021/05/26 19:21:20 [WARN] Truncating attribute path of 0 diagnostics for TypeSet
+2021/05/26 19:21:20 [TRACE] vertex "aws_security_group.sg_allowall": visit complete
+2021-05-26T19:21:20.688-0400 [DEBUG] plugin.terraform-provider-aws_v3.19.0_x5: 2021/05/26 19:21:20 [WARN] Truncating attribute path of 0 diagnostics for TypeSet
+2021/05/26 19:21:20 [TRACE] vertex "data.aws_ami.arm": visit complete
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "aws_instance.arm_vms"
+2021/05/26 19:21:20 [TRACE] vertex "aws_instance.arm_vms": starting visit (*terraform.NodeValidatableResource)
+2021/05/26 19:21:20 [TRACE] vertex "data.aws_ami.ubuntu": visit complete
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "aws_instance.ubuntu_vms"
+2021/05/26 19:21:20 [TRACE] vertex "aws_instance.ubuntu_vms": starting visit (*terraform.NodeValidatableResource)
+2021/05/26 19:21:20 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2021/05/26 19:21:20 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2021/05/26 19:21:20 [TRACE] vertex "aws_instance.arm_vms": visit complete
+2021/05/26 19:21:20 [TRACE] vertex "aws_instance.ubuntu_vms": visit complete
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "aws_elb.rancher-server-lb"
+2021/05/26 19:21:20 [TRACE] vertex "aws_elb.rancher-server-lb": starting visit (*terraform.NodeValidatableResource)
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "output.all_node_ips"
+2021/05/26 19:21:20 [TRACE] vertex "output.all_node_ips": starting visit (*terraform.NodeApplyableOutput)
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "output.ubuntu_node_ips"
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "output.rancher_cluster_ips"
+2021/05/26 19:21:20 [TRACE] vertex "output.ubuntu_node_ips": starting visit (*terraform.NodeApplyableOutput)
+2021/05/26 19:21:20 [TRACE] vertex "output.rancher_cluster_ips": starting visit (*terraform.NodeApplyableOutput)
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "output.arm_node_ips"
+2021/05/26 19:21:20 [TRACE] vertex "output.arm_node_ips": starting visit (*terraform.NodeApplyableOutput)
+2021/05/26 19:21:20 [TRACE] ExecuteWriteOutput: Saving Create change for output.all_node_ips in changeset
+2021/05/26 19:21:20 [TRACE] ExecuteWriteOutput: Saving Create change for output.ubuntu_node_ips in changeset
+2021/05/26 19:21:20 [TRACE] EvalWriteOutput: Removing output.all_node_ips from state (it is now null)
+2021/05/26 19:21:20 [TRACE] EvalWriteOutput: Removing output.ubuntu_node_ips from state (it is now null)
+2021/05/26 19:21:20 [TRACE] vertex "output.all_node_ips": visit complete
+2021/05/26 19:21:20 [TRACE] vertex "output.ubuntu_node_ips": visit complete
+2021/05/26 19:21:20 [TRACE] ExecuteWriteOutput: Saving Create change for output.arm_node_ips in changeset
+2021/05/26 19:21:20 [TRACE] EvalWriteOutput: Removing output.arm_node_ips from state (it is now null)
+2021/05/26 19:21:20 [TRACE] vertex "output.arm_node_ips": visit complete
+2021/05/26 19:21:20 [TRACE] ExecuteWriteOutput: Saving Create change for output.rancher_cluster_ips in changeset
+2021/05/26 19:21:20 [TRACE] EvalWriteOutput: Saving value for output.rancher_cluster_ips in state
+2021/05/26 19:21:20 [TRACE] vertex "output.rancher_cluster_ips": visit complete
+2021/05/26 19:21:20 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2021-05-26T19:21:20.691-0400 [DEBUG] plugin.terraform-provider-aws_v3.19.0_x5: 2021/05/26 19:21:20 [WARN] Truncating attribute path of 0 diagnostics for TypeSet
+2021/05/26 19:21:20 [TRACE] vertex "aws_elb.rancher-server-lb": visit complete
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "aws_route53_record.rancher"
+2021/05/26 19:21:20 [TRACE] vertex "aws_route53_record.rancher": starting visit (*terraform.NodeValidatableResource)
+2021/05/26 19:21:20 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2021/05/26 19:21:20 [TRACE] vertex "aws_route53_record.rancher": visit complete
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2021/05/26 19:21:20 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2021/05/26 19:21:20 [TRACE] GRPCProvider: Close
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2021/05/26 19:21:20 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2021/05/26 19:21:20 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2021-05-26T19:21:20.692-0400 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-05-26T19:21:20.695-0400 [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.19.0/darwin_amd64/terraform-provider-aws_v3.19.0_x5 pid=12014
+2021-05-26T19:21:20.695-0400 [DEBUG] plugin: plugin exited
+2021/05/26 19:21:20 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": visit complete
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "root"
+2021/05/26 19:21:20 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2021/05/26 19:21:20 [TRACE] vertex "root": visit complete
+2021/05/26 19:21:20 [INFO] backend/local: apply calling Plan
+2021/05/26 19:21:20 [INFO] terraform: building graph: GraphTypePlanDestroy
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.StateTransformer
+2021/05/26 19:21:20 [TRACE] StateTransformer: state is empty, so nothing to do
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.OutputTransformer
+2021/05/26 19:21:20 [TRACE] OutputTransformer: adding rancher_domain as *terraform.NodeDestroyableOutput
+2021/05/26 19:21:20 [TRACE] OutputTransformer: adding rancher_cluster_ips as *terraform.NodeDestroyableOutput
+2021/05/26 19:21:20 [TRACE] OutputTransformer: adding all_node_ips as *terraform.NodeDestroyableOutput
+2021/05/26 19:21:20 [TRACE] OutputTransformer: adding ubuntu_node_ips as *terraform.NodeDestroyableOutput
+2021/05/26 19:21:20 [TRACE] OutputTransformer: adding arm_node_ips as *terraform.NodeDestroyableOutput
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+  output.all_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.arm_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_cluster_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_domain (destroy) - *terraform.NodeDestroyableOutput
+  output.ubuntu_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  ------
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2021/05/26 19:21:20 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/digitalocean/digitalocean\"]" provider configuration from provider.tf:19,1-24
+2021/05/26 19:21:20 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/aws\"]" provider configuration from provider.tf:13,1-15
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  output.all_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.arm_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_cluster_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_domain (destroy) - *terraform.NodeDestroyableOutput
+  output.ubuntu_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2021/05/26 19:21:20 [DEBUG] pruning unused provider["registry.terraform.io/digitalocean/digitalocean"]
+2021/05/26 19:21:20 [DEBUG] pruning unused provider["registry.terraform.io/hashicorp/aws"]
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer with new graph:
+  output.all_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.arm_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_cluster_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_domain (destroy) - *terraform.NodeDestroyableOutput
+  output.ubuntu_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  ------
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.graphTransformerMulti (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.DestroyEdgeTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.DestroyEdgeTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.CloseProviderTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  output.all_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.arm_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_cluster_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_domain (destroy) - *terraform.NodeDestroyableOutput
+  output.ubuntu_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  root - *terraform.nodeCloseModule
+    output.all_node_ips (destroy) - *terraform.NodeDestroyableOutput
+    output.arm_node_ips (destroy) - *terraform.NodeDestroyableOutput
+    output.rancher_cluster_ips (destroy) - *terraform.NodeDestroyableOutput
+    output.rancher_domain (destroy) - *terraform.NodeDestroyableOutput
+    output.ubuntu_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  ------
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer (no changes)
+2021/05/26 19:21:20 [DEBUG] Starting graph walk: walkPlanDestroy
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "output.all_node_ips (destroy)"
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "output.rancher_domain (destroy)"
+2021/05/26 19:21:20 [TRACE] vertex "output.all_node_ips (destroy)": starting visit (*terraform.NodeDestroyableOutput)
+2021/05/26 19:21:20 [TRACE] vertex "output.rancher_domain (destroy)": starting visit (*terraform.NodeDestroyableOutput)
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "output.rancher_cluster_ips (destroy)"
+2021/05/26 19:21:20 [TRACE] vertex "output.rancher_cluster_ips (destroy)": starting visit (*terraform.NodeDestroyableOutput)
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "output.arm_node_ips (destroy)"
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "output.ubuntu_node_ips (destroy)"
+2021/05/26 19:21:20 [TRACE] vertex "output.arm_node_ips (destroy)": starting visit (*terraform.NodeDestroyableOutput)
+2021/05/26 19:21:20 [TRACE] vertex "output.ubuntu_node_ips (destroy)": starting visit (*terraform.NodeDestroyableOutput)
+2021/05/26 19:21:20 [TRACE] NodeDestroyableOutput: Saving Delete change for output.rancher_domain in changeset
+2021/05/26 19:21:20 [TRACE] vertex "output.rancher_domain (destroy)": visit complete
+2021/05/26 19:21:20 [TRACE] NodeDestroyableOutput: Saving Delete change for output.rancher_cluster_ips in changeset
+2021/05/26 19:21:20 [TRACE] NodeDestroyableOutput: Saving Delete change for output.ubuntu_node_ips in changeset
+2021/05/26 19:21:20 [TRACE] NodeDestroyableOutput: Saving Delete change for output.all_node_ips in changeset
+2021/05/26 19:21:20 [TRACE] vertex "output.ubuntu_node_ips (destroy)": visit complete
+2021/05/26 19:21:20 [TRACE] vertex "output.all_node_ips (destroy)": visit complete
+2021/05/26 19:21:20 [TRACE] NodeDestroyableOutput: Saving Delete change for output.arm_node_ips in changeset
+2021/05/26 19:21:20 [TRACE] vertex "output.arm_node_ips (destroy)": visit complete
+2021/05/26 19:21:20 [TRACE] vertex "output.rancher_cluster_ips (destroy)": visit complete
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "root"
+2021/05/26 19:21:20 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2021/05/26 19:21:20 [TRACE] vertex "root": visit complete
+2021/05/26 19:21:20 [INFO] backend/local: apply calling Apply
+2021/05/26 19:21:20 [INFO] terraform: building graph: GraphTypeApply
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2021/05/26 19:21:20 [TRACE] ConfigTransformer: Starting for path: 
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  aws_elb.rancher-server-lb (expand) - *terraform.nodeExpandApplyableResource
+  aws_instance.arm_vms (expand) - *terraform.nodeExpandApplyableResource
+  aws_instance.ubuntu_vms (expand) - *terraform.nodeExpandApplyableResource
+  aws_key_pair.ssh_key_pair (expand) - *terraform.nodeExpandApplyableResource
+  aws_route53_record.rancher (expand) - *terraform.nodeExpandApplyableResource
+  aws_security_group.sg_allowall (expand) - *terraform.nodeExpandApplyableResource
+  data.aws_ami.arm (expand) - *terraform.nodeExpandApplyableResource
+  data.aws_ami.ubuntu (expand) - *terraform.nodeExpandApplyableResource
+  data.aws_route53_zone.rancher (expand) - *terraform.nodeExpandApplyableResource
+  ------
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  aws_elb.rancher-server-lb (expand) - *terraform.nodeExpandApplyableResource
+  aws_instance.arm_vms (expand) - *terraform.nodeExpandApplyableResource
+  aws_instance.ubuntu_vms (expand) - *terraform.nodeExpandApplyableResource
+  aws_key_pair.ssh_key_pair (expand) - *terraform.nodeExpandApplyableResource
+  aws_route53_record.rancher (expand) - *terraform.nodeExpandApplyableResource
+  aws_security_group.sg_allowall (expand) - *terraform.nodeExpandApplyableResource
+  data.aws_ami.arm (expand) - *terraform.nodeExpandApplyableResource
+  data.aws_ami.ubuntu (expand) - *terraform.nodeExpandApplyableResource
+  data.aws_route53_zone.rancher (expand) - *terraform.nodeExpandApplyableResource
+  var.amd_count - *terraform.NodeRootVariable
+  var.arm_count - *terraform.NodeRootVariable
+  var.aws_access_key_id - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.aws_secret_access_key - *terraform.NodeRootVariable
+  var.prefix - *terraform.NodeRootVariable
+  var.ssh_key_file_name - *terraform.NodeRootVariable
+  ------
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.LocalTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.OutputTransformer
+2021/05/26 19:21:20 [TRACE] OutputTransformer: adding all_node_ips as *terraform.NodeDestroyableOutput
+2021/05/26 19:21:20 [TRACE] OutputTransformer: adding ubuntu_node_ips as *terraform.NodeDestroyableOutput
+2021/05/26 19:21:20 [TRACE] OutputTransformer: adding arm_node_ips as *terraform.NodeDestroyableOutput
+2021/05/26 19:21:20 [TRACE] OutputTransformer: adding rancher_domain as *terraform.NodeDestroyableOutput
+2021/05/26 19:21:20 [TRACE] OutputTransformer: adding rancher_cluster_ips as *terraform.NodeDestroyableOutput
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+  aws_elb.rancher-server-lb (expand) - *terraform.nodeExpandApplyableResource
+  aws_instance.arm_vms (expand) - *terraform.nodeExpandApplyableResource
+  aws_instance.ubuntu_vms (expand) - *terraform.nodeExpandApplyableResource
+  aws_key_pair.ssh_key_pair (expand) - *terraform.nodeExpandApplyableResource
+  aws_route53_record.rancher (expand) - *terraform.nodeExpandApplyableResource
+  aws_security_group.sg_allowall (expand) - *terraform.nodeExpandApplyableResource
+  data.aws_ami.arm (expand) - *terraform.nodeExpandApplyableResource
+  data.aws_ami.ubuntu (expand) - *terraform.nodeExpandApplyableResource
+  data.aws_route53_zone.rancher (expand) - *terraform.nodeExpandApplyableResource
+  output.all_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.arm_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_cluster_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_domain (destroy) - *terraform.NodeDestroyableOutput
+  output.ubuntu_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  var.amd_count - *terraform.NodeRootVariable
+  var.arm_count - *terraform.NodeRootVariable
+  var.aws_access_key_id - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.aws_secret_access_key - *terraform.NodeRootVariable
+  var.prefix - *terraform.NodeRootVariable
+  var.ssh_key_file_name - *terraform.NodeRootVariable
+  ------
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.DiffTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.DiffTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching to "aws_key_pair.ssh_key_pair (expand)" (*terraform.nodeExpandApplyableResource) config from main.tf:1,1-39
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_key_pair.ssh_key_pair (expand)
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching to "data.aws_route53_zone.rancher (expand)" (*terraform.nodeExpandApplyableResource) config from hcl.Range{Filename:"data.tf", Start:hcl.Pos{Line:31, Column:1, Byte:549}, End:hcl.Pos{Line:31, Column:34, Byte:582}}
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.aws_route53_zone.rancher (expand)
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching to "aws_route53_record.rancher (expand)" (*terraform.nodeExpandApplyableResource) config from lb.tf:42,1-40
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_route53_record.rancher (expand)
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching to "aws_instance.arm_vms (expand)" (*terraform.nodeExpandApplyableResource) config from main.tf:42,1-34
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_instance.arm_vms (expand)
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching to "data.aws_ami.arm (expand)" (*terraform.nodeExpandApplyableResource) config from hcl.Range{Filename:"data.tf", Start:hcl.Pos{Line:16, Column:1, Byte:276}, End:hcl.Pos{Line:16, Column:21, Byte:296}}
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.aws_ami.arm (expand)
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching to "aws_instance.ubuntu_vms (expand)" (*terraform.nodeExpandApplyableResource) config from main.tf:25,1-37
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_instance.ubuntu_vms (expand)
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching to "aws_elb.rancher-server-lb (expand)" (*terraform.nodeExpandApplyableResource) config from lb.tf:1,1-39
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_elb.rancher-server-lb (expand)
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching to "aws_security_group.sg_allowall (expand)" (*terraform.nodeExpandApplyableResource) config from main.tf:7,1-44
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_security_group.sg_allowall (expand)
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching to "data.aws_ami.ubuntu (expand)" (*terraform.nodeExpandApplyableResource) config from hcl.Range{Filename:"data.tf", Start:hcl.Pos{Line:1, Column:1, Byte:0}, End:hcl.Pos{Line:1, Column:24, Byte:23}}
+2021/05/26 19:21:20 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.aws_ami.ubuntu (expand)
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2021/05/26 19:21:20 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/digitalocean/digitalocean\"]" provider configuration from provider.tf:19,1-24
+2021/05/26 19:21:20 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/aws\"]" provider configuration from provider.tf:13,1-15
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  aws_elb.rancher-server-lb (expand) - *terraform.nodeExpandApplyableResource
+  aws_instance.arm_vms (expand) - *terraform.nodeExpandApplyableResource
+  aws_instance.ubuntu_vms (expand) - *terraform.nodeExpandApplyableResource
+  aws_key_pair.ssh_key_pair (expand) - *terraform.nodeExpandApplyableResource
+  aws_route53_record.rancher (expand) - *terraform.nodeExpandApplyableResource
+  aws_security_group.sg_allowall (expand) - *terraform.nodeExpandApplyableResource
+  data.aws_ami.arm (expand) - *terraform.nodeExpandApplyableResource
+  data.aws_ami.ubuntu (expand) - *terraform.nodeExpandApplyableResource
+  data.aws_route53_zone.rancher (expand) - *terraform.nodeExpandApplyableResource
+  output.all_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.arm_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_cluster_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_domain (destroy) - *terraform.NodeDestroyableOutput
+  output.ubuntu_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.amd_count - *terraform.NodeRootVariable
+  var.arm_count - *terraform.NodeRootVariable
+  var.aws_access_key_id - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.aws_secret_access_key - *terraform.NodeRootVariable
+  var.prefix - *terraform.NodeRootVariable
+  var.ssh_key_file_name - *terraform.NodeRootVariable
+  ------
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2021/05/26 19:21:20 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_security_group.sg_allowall (expand)
+2021/05/26 19:21:20 [DEBUG] ProviderTransformer: "aws_security_group.sg_allowall (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/05/26 19:21:20 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_elb.rancher-server-lb (expand)
+2021/05/26 19:21:20 [DEBUG] ProviderTransformer: "aws_elb.rancher-server-lb (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/05/26 19:21:20 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving data.aws_ami.ubuntu (expand)
+2021/05/26 19:21:20 [DEBUG] ProviderTransformer: "data.aws_ami.ubuntu (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/05/26 19:21:20 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_route53_record.rancher (expand)
+2021/05/26 19:21:20 [DEBUG] ProviderTransformer: "aws_route53_record.rancher (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/05/26 19:21:20 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_key_pair.ssh_key_pair (expand)
+2021/05/26 19:21:20 [DEBUG] ProviderTransformer: "aws_key_pair.ssh_key_pair (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/05/26 19:21:20 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving data.aws_route53_zone.rancher (expand)
+2021/05/26 19:21:20 [DEBUG] ProviderTransformer: "data.aws_route53_zone.rancher (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/05/26 19:21:20 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving data.aws_ami.arm (expand)
+2021/05/26 19:21:20 [DEBUG] ProviderTransformer: "data.aws_ami.arm (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/05/26 19:21:20 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_instance.ubuntu_vms (expand)
+2021/05/26 19:21:20 [DEBUG] ProviderTransformer: "aws_instance.ubuntu_vms (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/05/26 19:21:20 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_instance.arm_vms (expand)
+2021/05/26 19:21:20 [DEBUG] ProviderTransformer: "aws_instance.arm_vms (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  aws_elb.rancher-server-lb (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.arm_vms (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.ubuntu_vms (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_key_pair.ssh_key_pair (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_route53_record.rancher (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.sg_allowall (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_ami.arm (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_ami.ubuntu (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_route53_zone.rancher (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.all_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.arm_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_cluster_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_domain (destroy) - *terraform.NodeDestroyableOutput
+  output.ubuntu_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.amd_count - *terraform.NodeRootVariable
+  var.arm_count - *terraform.NodeRootVariable
+  var.aws_access_key_id - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.aws_secret_access_key - *terraform.NodeRootVariable
+  var.prefix - *terraform.NodeRootVariable
+  var.ssh_key_file_name - *terraform.NodeRootVariable
+  ------
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2021/05/26 19:21:20 [DEBUG] pruning unused provider["registry.terraform.io/digitalocean/digitalocean"]
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer with new graph:
+  aws_elb.rancher-server-lb (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.arm_vms (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.ubuntu_vms (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_key_pair.ssh_key_pair (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_route53_record.rancher (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.sg_allowall (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_ami.arm (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_ami.ubuntu (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_route53_zone.rancher (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.all_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.arm_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_cluster_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_domain (destroy) - *terraform.NodeDestroyableOutput
+  output.ubuntu_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.amd_count - *terraform.NodeRootVariable
+  var.arm_count - *terraform.NodeRootVariable
+  var.aws_access_key_id - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.aws_secret_access_key - *terraform.NodeRootVariable
+  var.prefix - *terraform.NodeRootVariable
+  var.ssh_key_file_name - *terraform.NodeRootVariable
+  ------
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2021/05/26 19:21:20 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  aws_elb.rancher-server-lb (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.arm_vms (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.ubuntu_vms (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_key_pair.ssh_key_pair (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_route53_record.rancher (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.sg_allowall (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_ami.arm (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_ami.ubuntu (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_route53_zone.rancher (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.all_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.arm_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_cluster_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_domain (destroy) - *terraform.NodeDestroyableOutput
+  output.ubuntu_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.amd_count - *terraform.NodeRootVariable
+  var.arm_count - *terraform.NodeRootVariable
+  var.aws_access_key_id - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.aws_secret_access_key - *terraform.NodeRootVariable
+  var.prefix - *terraform.NodeRootVariable
+  var.ssh_key_file_name - *terraform.NodeRootVariable
+  ------
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2021/05/26 19:21:20 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_instance.ubuntu_vms (expand)
+2021/05/26 19:21:20 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_instance.arm_vms (expand)
+2021/05/26 19:21:20 [TRACE] AttachSchemaTransformer: attaching resource schema to data.aws_ami.arm (expand)
+2021/05/26 19:21:20 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_security_group.sg_allowall (expand)
+2021/05/26 19:21:20 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_elb.rancher-server-lb (expand)
+2021/05/26 19:21:20 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/aws"]
+2021/05/26 19:21:20 [TRACE] AttachSchemaTransformer: attaching resource schema to data.aws_ami.ubuntu (expand)
+2021/05/26 19:21:20 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_route53_record.rancher (expand)
+2021/05/26 19:21:20 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_key_pair.ssh_key_pair (expand)
+2021/05/26 19:21:20 [TRACE] AttachSchemaTransformer: attaching resource schema to data.aws_route53_zone.rancher (expand)
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "data.aws_route53_zone.rancher (expand)" references: []
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "var.aws_secret_access_key" references: []
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "output.all_node_ips (destroy)" references: []
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "output.rancher_cluster_ips (destroy)" references: []
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "aws_route53_record.rancher (expand)" references: []
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "aws_key_pair.ssh_key_pair (expand)" references: []
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "data.aws_ami.arm (expand)" references: []
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "var.aws_region" references: []
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "var.ssh_key_file_name" references: []
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "output.arm_node_ips (destroy)" references: []
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "output.rancher_domain (destroy)" references: []
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "aws_instance.ubuntu_vms (expand)" references: [var.amd_count]
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "aws_instance.arm_vms (expand)" references: [var.arm_count]
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "var.aws_access_key_id" references: []
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "aws_security_group.sg_allowall (expand)" references: []
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "aws_elb.rancher-server-lb (expand)" references: []
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "var.arm_count" references: []
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "var.amd_count" references: []
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "output.ubuntu_node_ips (destroy)" references: []
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: [var.aws_access_key_id var.aws_region var.aws_secret_access_key]
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "data.aws_ami.ubuntu (expand)" references: []
+2021/05/26 19:21:20 [DEBUG] ReferenceTransformer: "var.prefix" references: []
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  aws_elb.rancher-server-lb (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.arm_vms (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.arm_count - *terraform.NodeRootVariable
+  aws_instance.ubuntu_vms (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.amd_count - *terraform.NodeRootVariable
+  aws_key_pair.ssh_key_pair (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_route53_record.rancher (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.sg_allowall (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_ami.arm (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_ami.ubuntu (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_route53_zone.rancher (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.all_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.arm_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_cluster_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_domain (destroy) - *terraform.NodeDestroyableOutput
+  output.ubuntu_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.aws_access_key_id - *terraform.NodeRootVariable
+    var.aws_region - *terraform.NodeRootVariable
+    var.aws_secret_access_key - *terraform.NodeRootVariable
+  var.amd_count - *terraform.NodeRootVariable
+  var.arm_count - *terraform.NodeRootVariable
+  var.aws_access_key_id - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.aws_secret_access_key - *terraform.NodeRootVariable
+  var.prefix - *terraform.NodeRootVariable
+  var.ssh_key_file_name - *terraform.NodeRootVariable
+  ------
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.DestroyEdgeTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.DestroyEdgeTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.CBDEdgeTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.CBDEdgeTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.pruneUnusedNodesTransformer
+2021/05/26 19:21:20 [DEBUG] pruneUnusedNodes: data.aws_ami.ubuntu (expand) is no longer needed, removing
+2021/05/26 19:21:20 [DEBUG] pruneUnusedNodes: aws_route53_record.rancher (expand) is no longer needed, removing
+2021/05/26 19:21:20 [DEBUG] pruneUnusedNodes: aws_key_pair.ssh_key_pair (expand) is no longer needed, removing
+2021/05/26 19:21:20 [DEBUG] pruneUnusedNodes: data.aws_route53_zone.rancher (expand) is no longer needed, removing
+2021/05/26 19:21:20 [DEBUG] pruneUnusedNodes: aws_instance.ubuntu_vms (expand) is no longer needed, removing
+2021/05/26 19:21:20 [DEBUG] pruneUnusedNodes: aws_instance.arm_vms (expand) is no longer needed, removing
+2021/05/26 19:21:20 [DEBUG] pruneUnusedNodes: aws_elb.rancher-server-lb (expand) is no longer needed, removing
+2021/05/26 19:21:20 [DEBUG] pruneUnusedNodes: aws_security_group.sg_allowall (expand) is no longer needed, removing
+2021/05/26 19:21:20 [DEBUG] pruneUnusedNodes: data.aws_ami.arm (expand) is no longer needed, removing
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.pruneUnusedNodesTransformer with new graph:
+  output.all_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.arm_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_cluster_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_domain (destroy) - *terraform.NodeDestroyableOutput
+  output.ubuntu_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.aws_access_key_id - *terraform.NodeRootVariable
+    var.aws_region - *terraform.NodeRootVariable
+    var.aws_secret_access_key - *terraform.NodeRootVariable
+  var.amd_count - *terraform.NodeRootVariable
+  var.arm_count - *terraform.NodeRootVariable
+  var.aws_access_key_id - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.aws_secret_access_key - *terraform.NodeRootVariable
+  var.prefix - *terraform.NodeRootVariable
+  var.ssh_key_file_name - *terraform.NodeRootVariable
+  ------
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    output.all_node_ips (destroy) - *terraform.NodeDestroyableOutput
+    output.arm_node_ips (destroy) - *terraform.NodeDestroyableOutput
+    output.rancher_cluster_ips (destroy) - *terraform.NodeDestroyableOutput
+    output.rancher_domain (destroy) - *terraform.NodeDestroyableOutput
+    output.ubuntu_node_ips (destroy) - *terraform.NodeDestroyableOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.amd_count - *terraform.NodeRootVariable
+    var.arm_count - *terraform.NodeRootVariable
+    var.aws_access_key_id - *terraform.NodeRootVariable
+    var.aws_region - *terraform.NodeRootVariable
+    var.aws_secret_access_key - *terraform.NodeRootVariable
+    var.prefix - *terraform.NodeRootVariable
+    var.ssh_key_file_name - *terraform.NodeRootVariable
+  output.all_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.arm_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_cluster_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_domain (destroy) - *terraform.NodeDestroyableOutput
+  output.ubuntu_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.aws_access_key_id - *terraform.NodeRootVariable
+    var.aws_region - *terraform.NodeRootVariable
+    var.aws_secret_access_key - *terraform.NodeRootVariable
+  var.amd_count - *terraform.NodeRootVariable
+  var.arm_count - *terraform.NodeRootVariable
+  var.aws_access_key_id - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.aws_secret_access_key - *terraform.NodeRootVariable
+  var.prefix - *terraform.NodeRootVariable
+  var.ssh_key_file_name - *terraform.NodeRootVariable
+  ------
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    output.all_node_ips (destroy) - *terraform.NodeDestroyableOutput
+    output.arm_node_ips (destroy) - *terraform.NodeDestroyableOutput
+    output.rancher_cluster_ips (destroy) - *terraform.NodeDestroyableOutput
+    output.rancher_domain (destroy) - *terraform.NodeDestroyableOutput
+    output.ubuntu_node_ips (destroy) - *terraform.NodeDestroyableOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.amd_count - *terraform.NodeRootVariable
+    var.arm_count - *terraform.NodeRootVariable
+    var.aws_access_key_id - *terraform.NodeRootVariable
+    var.aws_region - *terraform.NodeRootVariable
+    var.aws_secret_access_key - *terraform.NodeRootVariable
+    var.prefix - *terraform.NodeRootVariable
+    var.ssh_key_file_name - *terraform.NodeRootVariable
+  output.all_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.arm_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_cluster_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_domain (destroy) - *terraform.NodeDestroyableOutput
+  output.ubuntu_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.aws_access_key_id - *terraform.NodeRootVariable
+    var.aws_region - *terraform.NodeRootVariable
+    var.aws_secret_access_key - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.amd_count - *terraform.NodeRootVariable
+  var.arm_count - *terraform.NodeRootVariable
+  var.aws_access_key_id - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.aws_secret_access_key - *terraform.NodeRootVariable
+  var.prefix - *terraform.NodeRootVariable
+  var.ssh_key_file_name - *terraform.NodeRootVariable
+  ------
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    output.all_node_ips (destroy) - *terraform.NodeDestroyableOutput
+    output.arm_node_ips (destroy) - *terraform.NodeDestroyableOutput
+    output.rancher_cluster_ips (destroy) - *terraform.NodeDestroyableOutput
+    output.rancher_domain (destroy) - *terraform.NodeDestroyableOutput
+    output.ubuntu_node_ips (destroy) - *terraform.NodeDestroyableOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.amd_count - *terraform.NodeRootVariable
+    var.arm_count - *terraform.NodeRootVariable
+    var.aws_access_key_id - *terraform.NodeRootVariable
+    var.aws_region - *terraform.NodeRootVariable
+    var.aws_secret_access_key - *terraform.NodeRootVariable
+    var.prefix - *terraform.NodeRootVariable
+    var.ssh_key_file_name - *terraform.NodeRootVariable
+  output.all_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.arm_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_cluster_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_domain (destroy) - *terraform.NodeDestroyableOutput
+  output.ubuntu_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.aws_access_key_id - *terraform.NodeRootVariable
+    var.aws_region - *terraform.NodeRootVariable
+    var.aws_secret_access_key - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  var.amd_count - *terraform.NodeRootVariable
+  var.arm_count - *terraform.NodeRootVariable
+  var.aws_access_key_id - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.aws_secret_access_key - *terraform.NodeRootVariable
+  var.prefix - *terraform.NodeRootVariable
+  var.ssh_key_file_name - *terraform.NodeRootVariable
+  ------
+2021/05/26 19:21:20 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2021/05/26 19:21:20 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    output.all_node_ips (destroy) - *terraform.NodeDestroyableOutput
+    output.arm_node_ips (destroy) - *terraform.NodeDestroyableOutput
+    output.rancher_cluster_ips (destroy) - *terraform.NodeDestroyableOutput
+    output.rancher_domain (destroy) - *terraform.NodeDestroyableOutput
+    output.ubuntu_node_ips (destroy) - *terraform.NodeDestroyableOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.amd_count - *terraform.NodeRootVariable
+    var.arm_count - *terraform.NodeRootVariable
+    var.prefix - *terraform.NodeRootVariable
+    var.ssh_key_file_name - *terraform.NodeRootVariable
+  output.all_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.arm_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_cluster_ips (destroy) - *terraform.NodeDestroyableOutput
+  output.rancher_domain (destroy) - *terraform.NodeDestroyableOutput
+  output.ubuntu_node_ips (destroy) - *terraform.NodeDestroyableOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.aws_access_key_id - *terraform.NodeRootVariable
+    var.aws_region - *terraform.NodeRootVariable
+    var.aws_secret_access_key - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  var.amd_count - *terraform.NodeRootVariable
+  var.arm_count - *terraform.NodeRootVariable
+  var.aws_access_key_id - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.aws_secret_access_key - *terraform.NodeRootVariable
+  var.prefix - *terraform.NodeRootVariable
+  var.ssh_key_file_name - *terraform.NodeRootVariable
+  ------
+2021/05/26 19:21:20 [DEBUG] Starting graph walk: walkDestroy
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "var.aws_access_key_id"
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "output.all_node_ips (destroy)"
+2021/05/26 19:21:20 [TRACE] vertex "output.all_node_ips (destroy)": starting visit (*terraform.NodeDestroyableOutput)
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "output.ubuntu_node_ips (destroy)"
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "output.rancher_cluster_ips (destroy)"
+2021/05/26 19:21:20 [TRACE] vertex "output.rancher_cluster_ips (destroy)": starting visit (*terraform.NodeDestroyableOutput)
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "var.aws_secret_access_key"
+2021/05/26 19:21:20 [TRACE] vertex "var.aws_secret_access_key": starting visit (*terraform.NodeRootVariable)
+2021/05/26 19:21:20 [TRACE] NodeDestroyableOutput: Saving Delete change for output.all_node_ips in changeset
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "var.arm_count"
+2021/05/26 19:21:20 [TRACE] vertex "var.aws_secret_access_key": visit complete
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "var.amd_count"
+2021/05/26 19:21:20 [TRACE] vertex "var.amd_count": starting visit (*terraform.NodeRootVariable)
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "var.aws_region"
+2021/05/26 19:21:20 [TRACE] vertex "var.amd_count": visit complete
+2021/05/26 19:21:20 [TRACE] vertex "var.aws_region": starting visit (*terraform.NodeRootVariable)
+2021/05/26 19:21:20 [TRACE] vertex "output.ubuntu_node_ips (destroy)": starting visit (*terraform.NodeDestroyableOutput)
+2021/05/26 19:21:20 [TRACE] vertex "var.aws_region": visit complete
+2021/05/26 19:21:20 [TRACE] vertex "output.all_node_ips (destroy)": visit complete
+2021/05/26 19:21:20 [TRACE] NodeDestroyableOutput: Saving Delete change for output.ubuntu_node_ips in changeset
+2021/05/26 19:21:20 [TRACE] NodeDestroyableOutput: Saving Delete change for output.rancher_cluster_ips in changeset
+2021/05/26 19:21:20 [TRACE] vertex "output.ubuntu_node_ips (destroy)": visit complete
+2021/05/26 19:21:20 [TRACE] vertex "output.rancher_cluster_ips (destroy)": visit complete
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "output.rancher_domain (destroy)"
+2021/05/26 19:21:20 [TRACE] vertex "output.rancher_domain (destroy)": starting visit (*terraform.NodeDestroyableOutput)
+2021/05/26 19:21:20 [TRACE] NodeDestroyableOutput: Saving Delete change for output.rancher_domain in changeset
+2021/05/26 19:21:20 [TRACE] vertex "output.rancher_domain (destroy)": visit complete
+2021/05/26 19:21:20 [TRACE] vertex "var.aws_access_key_id": starting visit (*terraform.NodeRootVariable)
+2021/05/26 19:21:20 [TRACE] vertex "var.aws_access_key_id": visit complete
+2021/05/26 19:21:20 [TRACE] vertex "var.arm_count": starting visit (*terraform.NodeRootVariable)
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2021/05/26 19:21:20 [TRACE] vertex "var.arm_count": visit complete
+2021/05/26 19:21:20 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": starting visit (*terraform.NodeApplyableProvider)
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "output.arm_node_ips (destroy)"
+2021/05/26 19:21:20 [TRACE] vertex "output.arm_node_ips (destroy)": starting visit (*terraform.NodeDestroyableOutput)
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "var.prefix"
+2021/05/26 19:21:20 [TRACE] vertex "var.prefix": starting visit (*terraform.NodeRootVariable)
+2021/05/26 19:21:20 [TRACE] vertex "var.prefix": visit complete
+2021/05/26 19:21:20 [TRACE] NodeDestroyableOutput: Saving Delete change for output.arm_node_ips in changeset
+2021/05/26 19:21:20 [TRACE] dag/walk: visiting "var.ssh_key_file_name"
+2021/05/26 19:21:20 [TRACE] vertex "var.ssh_key_file_name": starting visit (*terraform.NodeRootVariable)
+2021/05/26 19:21:20 [TRACE] vertex "output.arm_node_ips (destroy)": visit complete
+2021/05/26 19:21:20 [TRACE] vertex "var.ssh_key_file_name": visit complete
+2021-05-26T19:21:20.699-0400 [INFO]  plugin: configuring client automatic mTLS
+2021-05-26T19:21:20.721-0400 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.19.0/darwin_amd64/terraform-provider-aws_v3.19.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/aws/3.19.0/darwin_amd64/terraform-provider-aws_v3.19.0_x5]
+2021-05-26T19:21:20.734-0400 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.19.0/darwin_amd64/terraform-provider-aws_v3.19.0_x5 pid=12015
+2021-05-26T19:21:20.734-0400 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.19.0/darwin_amd64/terraform-provider-aws_v3.19.0_x5
+2021-05-26T19:21:20.769-0400 [INFO]  plugin.terraform-provider-aws_v3.19.0_x5: configuring server automatic mTLS: timestamp=2021-05-26T19:21:20.769-0400
+2021-05-26T19:21:20.797-0400 [DEBUG] plugin: using plugin: version=5
+2021-05-26T19:21:20.797-0400 [DEBUG] plugin.terraform-provider-aws_v3.19.0_x5: plugin address: address=/var/folders/8w/vcjn9by91wg1rc4fg9jykvxm0000gn/T/plugin892560698 network=unix timestamp=2021-05-26T19:21:20.797-0400
+2021/05/26 19:21:20 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/aws\"]" provider for provider["registry.terraform.io/hashicorp/aws"]
+2021/05/26 19:21:20 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/aws"]: using explicit config only
+2021/05/26 19:21:20 [TRACE] GRPCProvider: GetSchema
+2021-05-26T19:21:20.849-0400 [TRACE] plugin.stdio: waiting for stdio data
+2021/05/26 19:21:20 [TRACE] GRPCProvider: Configure
+2021-05-26T19:21:20.917-0400 [DEBUG] plugin.terraform-provider-aws_v3.19.0_x5: 2021/05/26 19:21:20 [INFO] AWS Auth provider used: "StaticProvider"
+2021-05-26T19:21:20.917-0400 [DEBUG] plugin.terraform-provider-aws_v3.19.0_x5: 2021/05/26 19:21:20 [DEBUG] Trying to get account information via sts:GetCallerIdentity
+2021/05/26 19:21:21 [TRACE] backend/local: waiting for the running operation to stop
+2021/05/26 19:21:21 [WARN] terraform: Stop called, initiating interrupt sequence
+2021/05/26 19:21:21 [WARN] terraform: run context exists, stopping
+2021/05/26 19:21:21 [INFO] terraform: waiting for graceful stop to complete
+2021/05/26 19:21:21 [TRACE] Context: requesting providers and provisioners to gracefully stop
+2021/05/26 19:21:21 [TRACE] GRPCProvider: Stop
+2021-05-26T19:21:21.111-0400 [TRACE] plugin.terraform-provider-aws_v3.19.0_x5: plugin received interrupt signal, ignoring: count=1 timestamp=2021-05-26T19:21:21.110-0400
+2021-05-26T19:21:21.115-0400 [DEBUG] plugin.terraform-provider-aws_v3.19.0_x5: panic: close of nil channel
+2021-05-26T19:21:21.115-0400 [DEBUG] plugin.terraform-provider-aws_v3.19.0_x5: 
+2021-05-26T19:21:21.115-0400 [DEBUG] plugin.terraform-provider-aws_v3.19.0_x5: goroutine 105 [running]:
+2021-05-26T19:21:21.115-0400 [DEBUG] plugin.terraform-provider-aws_v3.19.0_x5: github.com/hashicorp/terraform-plugin-go/tfprotov5/server.(*server).stop(0xc000df9ca0)
+2021-05-26T19:21:21.115-0400 [DEBUG] plugin.terraform-provider-aws_v3.19.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.1.0/tfprotov5/server/server.go:201 +0x71
+2021-05-26T19:21:21.115-0400 [DEBUG] plugin.terraform-provider-aws_v3.19.0_x5: github.com/hashicorp/terraform-plugin-go/tfprotov5/server.(*server).Stop(0xc000df9ca0, 0x7ad3300, 0xc0010727b0, 0xc001072a50, 0xc000df9ca0, 0xc0010727b0, 0xc0006deba0)
+2021-05-26T19:21:21.115-0400 [DEBUG] plugin.terraform-provider-aws_v3.19.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.1.0/tfprotov5/server/server.go:215 +0xa1
+2021-05-26T19:21:21.115-0400 [DEBUG] plugin.terraform-provider-aws_v3.19.0_x5: github.com/hashicorp/terraform-plugin-go/tfprotov5/internal/tfplugin5._Provider_Stop_Handler(0x6cfe1e0, 0xc000df9ca0, 0x7ad3300, 0xc0010727b0, 0xc000b96180, 0x0, 0x7ad3300, 0xc0010727b0, 0x0, 0x0)
+2021-05-26T19:21:21.115-0400 [DEBUG] plugin.terraform-provider-aws_v3.19.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.1.0/tfprotov5/internal/tfplugin5/tfplugin5_grpc.pb.go:434 +0x217
+2021-05-26T19:21:21.115-0400 [DEBUG] plugin.terraform-provider-aws_v3.19.0_x5: google.golang.org/grpc.(*Server).processUnaryRPC(0xc000238a80, 0x7af81a0, 0xc0002c4480, 0xc0000ac300, 0xc0005e07e0, 0xb2fbfe8, 0x0, 0x0, 0x0)
+2021-05-26T19:21:21.115-0400 [DEBUG] plugin.terraform-provider-aws_v3.19.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:1194 +0x50a
+2021-05-26T19:21:21.115-0400 [DEBUG] plugin.terraform-provider-aws_v3.19.0_x5: google.golang.org/grpc.(*Server).handleStream(0xc000238a80, 0x7af81a0, 0xc0002c4480, 0xc0000ac300, 0x0)
+2021-05-26T19:21:21.115-0400 [DEBUG] plugin.terraform-provider-aws_v3.19.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:1517 +0xcfd
+2021-05-26T19:21:21.115-0400 [DEBUG] plugin.terraform-provider-aws_v3.19.0_x5: google.golang.org/grpc.(*Server).serveStreams.func1.2(0xc000cf0c00, 0xc000238a80, 0x7af81a0, 0xc0002c4480, 0xc0000ac300)
+2021-05-26T19:21:21.115-0400 [DEBUG] plugin.terraform-provider-aws_v3.19.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:859 +0xa1
+2021-05-26T19:21:21.115-0400 [DEBUG] plugin.terraform-provider-aws_v3.19.0_x5: created by google.golang.org/grpc.(*Server).serveStreams.func1
+2021-05-26T19:21:21.115-0400 [DEBUG] plugin.terraform-provider-aws_v3.19.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:857 +0x204
+2021-05-26T19:21:21.118-0400 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-05-26T19:21:21.118-0400 [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.19.0/darwin_amd64/terraform-provider-aws_v3.19.0_x5 pid=12015 error="exit status 2"
+2021/05/26 19:21:21 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": visit complete
+2021/05/26 19:21:21 [TRACE] dag/walk: upstream of "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" errored, so skipping
+2021/05/26 19:21:21 [TRACE] dag/walk: upstream of "meta.count-boundary (EachMode fixup)" errored, so skipping
+2021/05/26 19:21:21 [TRACE] dag/walk: upstream of "root" errored, so skipping
+2021/05/26 19:21:21 [TRACE] backend/local: graceful stop has completed
+2021/05/26 19:21:21 [WARN] terraform: stop complete
+2021/05/26 19:21:21 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2021/05/26 19:21:21 [TRACE] statemgr.Filesystem: snapshot file has nil snapshot, but that's okay
+2021/05/26 19:21:21 [TRACE] statemgr.Filesystem: read nil snapshot
+2021/05/26 19:21:21 [TRACE] statemgr.Filesystem: no original state snapshot to back up
+2021/05/26 19:21:21 [TRACE] statemgr.Filesystem: state has changed since last snapshot, so incrementing serial to 1
+2021/05/26 19:21:21 [TRACE] statemgr.Filesystem: writing snapshot at terraform.tfstate
+2021/05/26 19:21:21 [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
+2021/05/26 19:21:21 [TRACE] statemgr.Filesystem: unlocking terraform.tfstate using fcntl flock
+2021-05-26T19:21:21.148-0400 [DEBUG] plugin: plugin exited
