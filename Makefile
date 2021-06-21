@@ -6,7 +6,7 @@ RANCHER_IMAGE_TAG="--set rancherImageTag=master-head"
 SERVER_NUM=-1
 ADMIN_SECRET="LJLJPIYEoiuk9kkj23p77i"
 K3S_CHANNEL=v1.20
-K3S_UPGRADE_CHANNEL=v1.18
+K3S_UPGRADE_CHANNEL=v1.19
 export KUBECONFIG=kubeconfig
 
 destroy:
@@ -102,3 +102,8 @@ join_rancher: one_kubeconfig
 	export KUBECONFIG=./kubeconfig_all; \
 	kubectx three; \
 	source ./rancher-cluster.sh && create_cluster -i  -k -n three -s https://rancher-demo.mak3r.design -u "admin" -p ${ADMIN_SECRET} -x
+
+apply_labels: one_kubeconfig
+	export KUBECONFIG=./kubeconfig_all; \
+	kubectx one; \
+	kubectl apply 

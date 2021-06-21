@@ -2,6 +2,26 @@
 
 ## Installation steps
 
+### Simple
+
+1. Build all infra and clusters
+
+    Include `RANCHER_IMAGE_TAG` to specify no Rancher image tag (leaving blank will install latest from`master-head`). 
+
+    ```
+    make all RANCHER_IMAGE_TAG="" 
+    ```
+
+1. Add the clusters to Rancher
+
+    `ADMIN_SECRET` will be the password for the admin login to the Rancher UI
+
+    ```
+    make join_rancher ADMIN_SECRET="secret"
+    ```
+
+### Step by step
+
 1. Setup infrastructure
 
 Fill out `terraform-setup/terraform.tfvars` with aws and digital ocean credentials.
@@ -26,6 +46,12 @@ make step_03
 
 ```
 make step_04
+```
+
+1. Add the clusters to Rancher
+
+```
+make join_rancher
 ```
 
 ### Configure Rancher
