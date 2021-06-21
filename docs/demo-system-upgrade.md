@@ -14,16 +14,21 @@
         * `arch=arm`
         * `geo=NY`
 
-## Demo
+1. Make sure the `https://github.com/mak3r/fleet-demo-src/upgrades/plan.yaml` exhibits an upgrade for demo k3s version.
 
-1. Connect the git repo https://github.com/rancher/system-upgrade-controller
-1. Set branch to `master`
-1. Set path to `manifests`
-1. Select `All clusters`
+## Demo
 
 1. Create a cluster group for `arch=arm`
 
+1. Connect the git repo https://github.com/rancher/system-upgrade-controller
+    * Set branch to `master`
+    * Set path to `manifests`
+    * Select `All clusters`
+
 1. Connect the git repo https://github.com/mak3r/fleet-demo-src
-1. Set brancher to `main`
-1. Set path to `upgrades`
-1. Select `Arm` cluster group
+
+    * Set brancher to `main`
+    * Set path to `upgrades`
+    * Select `Arm` cluster group
+
+1. Return to Rancher UI and view upgraded k3s versions
